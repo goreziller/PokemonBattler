@@ -1,6 +1,8 @@
 # PokemonBattler
 [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](http://forthebadge.com)
+
 
 Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den Ebenen hoch zu kommen.
 
@@ -22,3 +24,4 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Einbauen das man das Spiel auch verliegen kann
 - Optische Überarbeitung
 - .exe anbieten um dort das Game dirket starten zu können
+- Attacken in der jeweiligen Farbe des Types anezeigen lassen + Typ Icon
