@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PlayerController">
+   <children>
+      <ImageView fx:id="slot1" fitHeight="90.0" fitWidth="100.0" layoutX="2.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" />
+      <Label alignment="CENTER" layoutX="251.0" layoutY="14.0" prefHeight="40.0" prefWidth="133.0" style="-fx-background-color: linear-gradient(to left, #ffebcd, #008080); -fx-border-color: black;" text="Statistik">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <ImageView fx:id="slot2" fitHeight="90.0" fitWidth="100.0" layoutX="102.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="slot3" fitHeight="90.0" fitWidth="100.0" layoutX="202.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="slot4" fitHeight="90.0" fitWidth="100.0" layoutX="302.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="slot5" fitHeight="90.0" fitWidth="100.0" layoutX="402.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="slot6" fitHeight="90.0" fitWidth="100.0" layoutX="502.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="2.0" layoutY="269.0" prefHeight="90.0" prefWidth="100.0" style="-fx-border-color: black;" />
+      <Label alignment="CENTER" layoutX="20.0" layoutY="68.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-border-color: darkblue;" text="Spielername" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="115.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-border-color: darkblue;" text="Spielzeit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="237.0" layoutY="232.0" prefHeight="27.0" prefWidth="133.0" style="-fx-background-color: linear-gradient(to left, #ffebcd, #008080) gray; -fx-border-color: black;" text="Pokemonliste">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="269.0" prefHeight="90.0" prefWidth="100.0" style="-fx-border-color: black;" />
+      <Label layoutX="202.0" layoutY="269.0" prefHeight="90.0" prefWidth="100.0" style="-fx-border-color: black;" />
+      <Label layoutX="302.0" layoutY="269.0" prefHeight="90.0" prefWidth="100.0" style="-fx-border-color: black;" />
+      <Label layoutX="402.0" layoutY="269.0" prefHeight="90.0" prefWidth="100.0" style="-fx-border-color: black;" />
+      <Label layoutX="502.0" layoutY="269.0" prefHeight="90.0" prefWidth="100.0" style="-fx-border-color: black;" />
+      <Label fx:id="playername" alignment="CENTER" layoutX="160.0" layoutY="68.0" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e);" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="gametime" alignment="CENTER" layoutX="160.0" layoutY="115.0" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e);" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button  fx:id="button1" layoutX="51.0" layoutY="200.0" mnemonicParsing="false" onAction="#toGameField" prefHeight="32.0" prefWidth="153.0" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd); -fx-border-color: black;" text="Zum Spielfeld" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="button2" layoutX="395.0" layoutY="200.0" mnemonicParsing="false" onAction="#saveData" prefHeight="32.0" prefWidth="165.0" style="-fx-background-color: linear-gradient(to bottom, #ff7f50, #6a5acd); -fx-border-color: black;" text="Speichern &amp; Beenden" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="160.0" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-border-color: darkblue;" text="Ebene" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="level" alignment="CENTER" layoutX="160.0" layoutY="160.0" prefHeight="27.0" prefWidth="106.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e);" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="350.0" layoutY="68.0" prefHeight="32.0" prefWidth="106.0" style="-fx-border-color: darkblue; -fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e);" text="Siege" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="350.0" layoutY="115.0" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-border-color: darkblue;" text="Niederlagen" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Label>
+      <Label fx:id="win" alignment="CENTER" layoutX="477.0" layoutY="68.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-border-color: darkblue;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lose" alignment="CENTER" layoutX="477.0" layoutY="115.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-border-color: darkblue;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="buttonslot1" layoutX="8.0" layoutY="368.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-border-color: black;" text="Slot 1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="buttonslot2" layoutX="108.0" layoutY="368.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-border-color: black;" text="Slot 2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="buttonslot3" layoutX="207.0" layoutY="368.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-border-color: black;" text="Slot 3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="buttonslot4" layoutX="306.0" layoutY="368.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-border-color: black;" text="Slot 4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="buttonslot5" layoutX="408.0" layoutY="368.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-border-color: black;" text="Slot 5">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="buttonslot6" layoutX="508.0" layoutY="368.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" style="-fx-border-color: black;" text="Slot 6">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="levelslot1" alignment="CENTER" layoutX="16.0" layoutY="342.0" prefHeight="11.0" prefWidth="70.0" style="-fx-background-color: black;" textFill="WHITE" />
+      <Label fx:id="levelslot2" alignment="CENTER" layoutX="117.0" layoutY="342.0" prefHeight="17.0" prefWidth="70.0" style="-fx-background-color: black;" textFill="WHITE" />
+      <Label fx:id="levelslot3" alignment="CENTER" layoutX="216.0" layoutY="342.0" prefHeight="17.0" prefWidth="70.0" style="-fx-background-color: black;" textFill="WHITE" />
+      <Label fx:id="levelslot4" alignment="CENTER" layoutX="317.0" layoutY="342.0" prefHeight="17.0" prefWidth="70.0" style="-fx-background-color: black;" textFill="WHITE" />
+      <Label fx:id="levelslot5" alignment="CENTER" layoutX="417.0" layoutY="342.0" prefHeight="17.0" prefWidth="70.0" style="-fx-background-color: black;" textFill="WHITE" />
+      <Label fx:id="levelslot6" alignment="CENTER" layoutX="512.0" layoutY="342.0" prefHeight="17.0" prefWidth="80.0" style="-fx-background-color: black;" textFill="WHITE" />
+   </children>
+</AnchorPane>

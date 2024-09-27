@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+   <children>
+      <Button fx:id="button1" layoutX="10.0" layoutY="150.0" mnemonicParsing="false" onAction="#newGame" prefWidth="150.0" style="-fx-background-color: linear-gradient(to bottom, #ff7f50, #6a5acd); -fx-border-color: black;" text="Neues Spiel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+       <Button fx:id="button2" layoutX="429.0" layoutY="150.0" mnemonicParsing="false" onAction="#loadData" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to bottom, #ff7f50, #6a5acd); -fx-border-color: black;" text="Spiel laden" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <ComboBox fx:id="playerlist" layoutX="211.0" layoutY="230.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to bottom, #ff7f50, #6a5acd); -fx-border-color: black;" />
+   </children>
+</Pane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CatchController">
+    <children>
+        <ImageView fx:id="field1" fitHeight="120.0" fitWidth="150.0" layoutX="20.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="field2" fitHeight="120.0" fitWidth="150.0" layoutX="220.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="field3" fitHeight="120.0" fitWidth="150.0" layoutX="420.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+        <Label alignment="CENTER" layoutX="114.0" layoutY="23.0" prefHeight="30.0" prefWidth="338.0" style="-fx-background-color: linear-gradient(to left, #ffebcd, #008080);" text="Catch Menü">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font></Label>
+        <Button fx:id="button1" layoutX="40.0" layoutY="250.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: linear-gradient(to bottom, #ff7f50, #6a5acd); -fx-text-fill: white;" text="Auswählen">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button fx:id="button2" layoutX="240.0" layoutY="250.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: linear-gradient(to bottom, #ff7f50, #6a5acd); -fx-text-fill: white;" text="Auswählen">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Button fx:id="button3" layoutX="440.0" layoutY="250.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: linear-gradient(to bottom, #ff7f50, #6a5acd); -fx-text-fill: white;" text="Auswählen">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font></Button>
+        <Label layoutX="20.0" layoutY="110.0" prefHeight="120" prefWidth="150" style="-fx-border-color: black;" />
+        <Label layoutX="220.0" layoutY="110.0" prefHeight="120" prefWidth="150" style="-fx-border-color: black;" />
+        <Label layoutX="420.0" layoutY="110.0" prefHeight="120" prefWidth="150" style="-fx-border-color: black;" />
+    </children>
+</AnchorPane>

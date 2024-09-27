@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SelectPokemonController">
+   <children>
+      <ImageView fx:id="img1" fitHeight="118.0" fitWidth="179.0" layoutX="60.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="img2" fitHeight="118.0" fitWidth="179.0" layoutX="240.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="img3" fitHeight="118.0" fitWidth="179.0" layoutX="420.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="label1" alignment="CENTER" layoutX="70.0" layoutY="160.0" prefHeight="20.0" prefWidth="90.0" />
+      <Label fx:id="label2" alignment="CENTER" layoutX="250.0" layoutY="160.0" prefHeight="20.0" prefWidth="90.0" />
+      <Label fx:id="label3" alignment="CENTER" layoutX="430.0" layoutY="160.0" prefHeight="20.0" prefWidth="90.0" />
+      <Label fx:id="labelgen" alignment="CENTER" layoutX="235.0" layoutY="25.0" prefHeight="20.0" prefWidth="125.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnnext" layoutX="350.0" layoutY="260.0" mnemonicParsing="false" onAction="#switchSenceForward" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd); -fx-border-color: black;" text="Nächste Seite" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnprevious" layoutX="150.0" layoutY="260.0" mnemonicParsing="false" onAction="#switchSenceBackward" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd); -fx-border-color: black;" text="Vorherrige Seite" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="70.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectPokemonGrass" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd); -fx-border-color: black;" text="Auswählen" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="250.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectPokemonFire" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd); -fx-border-color: black;" text="Auswählen" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="430.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectPokemonWater" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd); -fx-border-color: black;" text="Auswählen" textFill="WHITE" />
+   </children>
+</Pane>

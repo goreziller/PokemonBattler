@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FightController">
+   <children>
+      <ImageView fx:id="pokemonimage" fitHeight="150.0" fitWidth="214.0" layoutX="43.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="enemyimage" fitHeight="150.0" fitWidth="200.0" layoutX="352.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="info" layoutX="28.0" layoutY="335.0" prefHeight="53.0" prefWidth="229.0" style="-fx-border-color: black; -fx-background-color: white;" text="Label" />
+      <Button fx:id="move1" layoutX="266.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseAttackOne" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd);" text="Move1" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="move2" layoutX="428.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseAttackTwo" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd);" text="Move2" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+      <Button fx:id="move3" layoutX="266.0" layoutY="361.0" mnemonicParsing="false" onAction="#chooseAttackThree" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd);" text="Move3" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+      <Button fx:id="move4" layoutX="428.0" layoutY="361.0" mnemonicParsing="false" onAction="#chooseAttackFour" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: linear-gradient(to left, #ff7f50, #6a5acd);" text="Move4" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+      <Label alignment="CENTER" layoutX="303.0" layoutY="241.0" prefHeight="85.0" prefWidth="242.0" style="-fx-border-color: black; -fx-background-color: linear-gradient(to right, lightgray, white);" />
+      <Label fx:id="enemyinfo" alignment="CENTER" layoutX="32.0" layoutY="47.0" prefHeight="71.0" prefWidth="229.0" style="-fx-border-color: black; -fx-background-color: linear-gradient(to right, lightgray, white);" />
+      <Label fx:id="pokemonname" alignment="CENTER" layoutX="319.0" layoutY="250.0" prefHeight="17.0" prefWidth="66.0" text="Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="pokemonlevel" alignment="CENTER" layoutX="445.0" layoutY="250.0" prefHeight="17.0" prefWidth="66.0" text="level" />
+      <Label fx:id="hpbar" layoutX="414.0" layoutY="275.0" prefHeight="17.0" prefWidth="105.0" text="hp" />
+      <Label fx:id="showhp" alignment="CENTER" layoutX="410.0" layoutY="301.0" prefHeight="17.0" prefWidth="113.0" text="leben" />
+      <Label fx:id="enemyname" alignment="CENTER" layoutX="53.0" layoutY="60.0" prefHeight="17.0" prefWidth="58.0" text="enemyname" />
+      <Label fx:id="enemylevel" alignment="CENTER" layoutX="173.0" layoutY="60.0" prefHeight="17.0" prefWidth="66.0" text="enemylevel" />
+      <Label fx:id="hpenemy" alignment="CENTER" layoutX="133.0" layoutY="91.0" prefHeight="17.0" prefWidth="105.0" text="enemyhp" />
+   </children>
+</AnchorPane>
