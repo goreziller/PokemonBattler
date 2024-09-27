@@ -20,3 +20,5 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Mehr Auswahlfelder nach jeder Ebene
 - Längere Ebenen
 - Einbauen das man das Spiel auch verliegen kann
+- Optische Überarbeitung
+- .exe anbieten um dort das Game dirket starten zu können
