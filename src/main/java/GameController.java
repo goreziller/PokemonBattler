@@ -51,17 +51,17 @@ public class GameController implements Initializable
         System.out.println(chance);
         if(chance < 60)
         {
-            field.setImage(new Image("file:src/main/Bilder/FightField.jpg"));
+            field.setImage(new Image("file:src/main/Bilder/FightField.jpg", 100, 80, false, false));
             button.setOnAction(e -> createButtonAction("FightMenu.fxml", true));
         }
         else if(chance < 90)
         {
-            field.setImage(new Image("file:src/main/Bilder/CatchField.jpg"));
+            field.setImage(new Image("file:src/main/Bilder/CatchField.jpg", 100, 80, false, false));
             button.setOnAction(e -> createButtonAction("CatchMenu.fxml", false));
         }
         else
         {
-            field.setImage(new Image("file:src/main/Bilder/CloverLeafField.jpg"));
+            field.setImage(new Image("file:src/main/Bilder/CloverLeafField.jpg", 100, 80, false, false));
             button.setOnAction(e -> createLuck());
         }
     }

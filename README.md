@@ -28,3 +28,4 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - .exe anbieten um dort das Game dirket starten zu können
 - Dymatische Fenster Größe
 - Wechseln von Attacken und Teammitgliedern
+- Im Pokemonkampf Wechseln, Items nutzen und flüchten einbauen
