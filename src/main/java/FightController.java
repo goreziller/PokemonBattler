@@ -12,6 +12,7 @@ import javafx.scene.paint.Color;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class FightController implements Initializable
@@ -75,9 +76,192 @@ public class FightController implements Initializable
                 pokemonimage.setImage(new Image(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getSprites().getBack_default()));
             }
         }
-        info.setText("What will\n" + SelectPokemonController.getPlayer().getPokemonliste().get(slot).getName() + " do?");
+        String pokemonName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getName();
+        pokemonName = pokemonName.substring(0, 1).toUpperCase() + pokemonName.substring(1).toLowerCase();
+        info.setText("What will\n" + pokemonName + " do?");
         showFightInfo();
-        pokemonname.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getName());
+
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().size() == 2)
+        {
+
+        }
+        else
+        {
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire"))
+            {
+                //HBox hBox = new HBox();
+
+                Image img = new Image("file:src/main/Bilder/FireType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+
+                //Image img1 = new Image("file:src/main/Bilder/WaterType.png");
+                //ImageView view1 = new ImageView(img1);
+                //view1.setFitWidth(16);
+                //view1.setFitHeight(16);
+
+                //hBox.getChildren().addAll(view, view1);
+
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("water"))
+            {
+                Image img = new Image("file:src/main/Bilder/WaterType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("grass"))
+            {
+                Image img = new Image("file:src/main/Bilder/GrassType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("bug"))
+            {
+                Image img = new Image("file:src/main/Bilder/BugType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("dark"))
+            {
+                Image img = new Image("file:src/main/Bilder/DarkType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("dragon"))
+            {
+                Image img = new Image("file:src/main/Bilder/DragonType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("electric"))
+            {
+                Image img = new Image("file:src/main/Bilder/ElectricType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fairy"))
+            {
+                Image img = new Image("file:src/main/Bilder/FairyType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fighting"))
+            {
+                Image img = new Image("file:src/main/Bilder/FightingType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("flying"))
+            {
+                Image img = new Image("file:src/main/Bilder/FlyingType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("ghost"))
+            {
+                Image img = new Image("file:src/main/Bilder/GhostType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("ground"))
+            {
+                Image img = new Image("file:src/main/Bilder/GroundType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("ice"))
+            {
+                Image img = new Image("file:src/main/Bilder/IceType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("normal"))
+            {
+                Image img = new Image("file:src/main/Bilder/NormalType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("poison"))
+            {
+                Image img = new Image("file:src/main/Bilder/PoisonType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("psychic"))
+            {
+                Image img = new Image("file:src/main/Bilder/PsychicType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("rock"))
+            {
+                Image img = new Image("file:src/main/Bilder/RockType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("steel"))
+            {
+                Image img = new Image("file:src/main/Bilder/SteelType.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(16);
+                view.setFitHeight(16);
+                pokemonname.setGraphic(view);
+                pokemonname.setText(pokemonName);
+            }
+        }
+
+        //pokemonname.setText(pokemonName);
         pokemonlevel.setText("Lv." + SelectPokemonController.getPlayer().getPokemonliste().get(slot).getLevel());
         hp = (int) Math.round(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getStats().get(0).getBase_stat() * (1 + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getLevel() * 0.02)));
         currenthp = hp;
@@ -95,7 +279,9 @@ public class FightController implements Initializable
             enemyhp = (int) Math.round(p.getStats().get(0).getBase_stat() * (1 + (p.getLevel() * 0.02)));
             currentenemyhp = enemyhp;
             enemyimage.setImage(new Image(p.getSprites().getFront_default()));
-            enemyname.setText(p.getName());
+            String enemyName = p.getName();
+            enemyName = enemyName.substring(0, 1).toUpperCase() + enemyName.substring(1).toLowerCase();
+            enemyname.setText(enemyName);
             enemylevel.setText("Lv." + p.getLevel());
             hpenemy.setText(currentenemyhp + " / " +  enemyhp);
         }
@@ -115,10 +301,6 @@ public class FightController implements Initializable
         try
         {
             typespecificButton();
-            //move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() +  " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
-            //move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
-            //move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
-            //move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
         }
         catch (Exception e)
         {
@@ -137,7 +319,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("fire"))
@@ -147,7 +331,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("fire"))
@@ -157,7 +343,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("fire"))
@@ -167,7 +355,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -179,7 +369,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(99, 144, 240), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("water"))
@@ -189,7 +381,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(99, 144, 240), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("water"))
@@ -199,7 +393,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(99, 144, 240), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("water"))
@@ -209,7 +405,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(99, 144, 240), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -221,37 +419,45 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(168, 167, 122), CornerRadii.EMPTY, Insets.EMPTY)));
         }
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("water"))
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("normal"))
         {
             Image img = new Image("file:src/main/Bilder/NormalType.png");
             ImageView view = new ImageView(img);
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(168, 167, 122), CornerRadii.EMPTY, Insets.EMPTY)));
         }
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("water"))
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("normal"))
         {
             Image img = new Image("file:src/main/Bilder/NormalType.png");
             ImageView view = new ImageView(img);
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(168, 167, 122), CornerRadii.EMPTY, Insets.EMPTY)));
         }
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("water"))
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("normal"))
         {
             Image img = new Image("file:src/main/Bilder/NormalType.png");
             ImageView view = new ImageView(img);
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(168, 167, 122), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -263,7 +469,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(166, 185, 26), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("bug"))
@@ -273,7 +481,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(166, 185, 26), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("bug"))
@@ -283,7 +493,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(166, 185, 26), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("bug"))
@@ -293,7 +505,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(166, 185, 26), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -305,7 +519,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(112, 87, 70), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("dark"))
@@ -315,7 +531,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(112, 87, 70), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("dark"))
@@ -325,7 +543,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(112, 87, 70), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("dark"))
@@ -335,7 +555,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(112, 87, 70), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -347,7 +569,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(111, 53, 252), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("dragon"))
@@ -357,7 +581,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(111, 53, 252), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("dragon"))
@@ -367,7 +593,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(111, 53, 252), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("dragon"))
@@ -377,7 +605,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(111, 53, 252), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -389,7 +619,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(247, 208, 44), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("electic"))
@@ -399,7 +631,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(247, 208, 44), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("electic"))
@@ -409,7 +643,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(247, 208, 44), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("electic"))
@@ -419,7 +655,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(247, 208, 44), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -431,7 +669,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(214, 133, 173), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("fairy"))
@@ -441,7 +681,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(214, 133, 173), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("fairy"))
@@ -451,7 +693,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(214, 133, 173), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("fairy"))
@@ -461,7 +705,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(214, 133, 173), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -473,7 +719,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(194, 46, 40), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("fighting"))
@@ -483,7 +731,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(194, 46, 40), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("fighting"))
@@ -493,7 +743,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(194, 46, 40), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("fighting"))
@@ -503,7 +755,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(194, 46, 40), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -515,7 +769,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(169, 143, 243), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("flying"))
@@ -525,7 +781,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(169, 143, 243), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("flying"))
@@ -535,7 +793,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(169, 143, 243), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("flying"))
@@ -545,7 +805,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(169, 143, 243), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -557,7 +819,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(115,87,151), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("ghost"))
@@ -567,7 +831,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(115,87,151), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("ghost"))
@@ -577,7 +843,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(115,87,151), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("ghost"))
@@ -587,7 +855,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(115,87,151), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -599,7 +869,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(122,199,76), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("grass"))
@@ -609,7 +881,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(122,199,76), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("grass"))
@@ -619,7 +893,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(122,199,76), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("grass"))
@@ -629,7 +905,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(122,199,76), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -641,7 +919,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(226,191,101), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("ground"))
@@ -651,7 +931,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(226,191,101), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("ground"))
@@ -661,7 +943,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(226,191,101), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("ground"))
@@ -671,7 +955,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(226,191,101), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -683,7 +969,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(150,217,214), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("ice"))
@@ -693,7 +981,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(150,217,214), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("ice"))
@@ -703,7 +993,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(150,217,214), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("ice"))
@@ -713,7 +1005,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(150,217,214), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -725,7 +1019,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(163,62,161), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("poison"))
@@ -735,7 +1031,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(163,62,161), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("poison"))
@@ -745,7 +1043,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(163,62,161), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("poison"))
@@ -755,7 +1055,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(163,62,161), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -767,7 +1069,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(249,85,135), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("psychic"))
@@ -777,7 +1081,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(249,85,135), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("psychic"))
@@ -787,7 +1093,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(249,85,135), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("psychic"))
@@ -797,7 +1105,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(249,85,135), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -809,7 +1119,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(182,161,54), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("rock"))
@@ -819,7 +1131,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(182,161,54), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("rock"))
@@ -829,7 +1143,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(182,161,54), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("rock"))
@@ -839,7 +1155,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(182,161,54), CornerRadii.EMPTY, Insets.EMPTY)));
         }
 
@@ -851,7 +1169,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move1.setGraphic(view);
-            move1.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(183,183,206), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("steel"))
@@ -861,7 +1181,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move2.setGraphic(view);
-            move2.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(183,183,206), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("steel"))
@@ -871,7 +1193,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move3.setGraphic(view);
-            move3.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(183,183,206), CornerRadii.EMPTY, Insets.EMPTY)));
         }
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("steel"))
@@ -881,7 +1205,9 @@ public class FightController implements Initializable
             view.setFitWidth(16);
             view.setFitHeight(16);
             move4.setGraphic(view);
-            move4.setText(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName() + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
+            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
             move4.setBackground(new Background(new BackgroundFill(Color.rgb(183,183,206), CornerRadii.EMPTY, Insets.EMPTY)));
         }
     }

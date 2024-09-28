@@ -127,7 +127,9 @@ public class PlayerController implements Initializable
                 }
                 level.setText("Lv." + SelectPokemonController.getPlayer().getPokemonliste().get(i).getLevel());
             }
-            button.setText(SelectPokemonController.getPlayer().getPokemonliste().get(i).getName());
+            String pokemonName = SelectPokemonController.getPlayer().getPokemonliste().get(i).getName();
+            pokemonName = pokemonName.substring(0, 1).toUpperCase() + pokemonName.substring(1).toLowerCase();
+            button.setText(pokemonName);
             button.setVisible(true);
             level.setVisible(true);
         }
