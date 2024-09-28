@@ -8,7 +8,8 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 
 ![Unbenannt2](https://github.com/user-attachments/assets/cbcff00e-7dff-4c7e-a43f-80f94ffbf941)
 ![Unbenannt3](https://github.com/user-attachments/assets/701a8a3a-62b3-4e72-9a72-30dc63ee9b65)
-![Unbenannt4](https://github.com/user-attachments/assets/f9c19e52-8c4b-43e9-884c-457e2bb8661a)
+![Unbenannt8](https://github.com/user-attachments/assets/84376b27-d69f-422d-8a1f-ab51cf7be225)
+
 
 ## Features
 - Pokemon erscheinen im Kampf abhängig von der aktuellen Temperatur häufiger oder seltener
