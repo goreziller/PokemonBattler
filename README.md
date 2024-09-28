@@ -29,3 +29,4 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Dymatische Fenster Größe
 - Wechseln von Attacken und Teammitgliedern
 - Im Pokemonkampf Wechseln, Items nutzen und flüchten einbauen
+- Währung einbauen die man dann in einem Shop gegen Items eintauschen kann
