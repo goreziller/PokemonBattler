@@ -17,6 +17,7 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Spiel kann jederzeit gespeichert werden und ein Spielstand kann auch wieder geladen werden
 
 ## Geplante Features
+- ~~Attacken in der jeweiligen Farbe des Types anezeigen lassen + Typ Icon~~
 - Typen Effektivität wird aktuell noch nicht berücksichtig
 - Scaling der Gegner
 - Mehr Auswahlfelder nach jeder Ebene
@@ -24,4 +25,5 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Einbauen das man das Spiel auch verliegen kann
 - Optische Überarbeitung
 - .exe anbieten um dort das Game dirket starten zu können
-- Attacken in der jeweiligen Farbe des Types anezeigen lassen + Typ Icon
+- Dymatische Fenster Größe
+- Wechseln von Attacken und Teammitgliedern
