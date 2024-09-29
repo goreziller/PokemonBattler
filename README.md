@@ -6,8 +6,8 @@
 
 Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den Ebenen hoch zu kommen.
 
-![Unbenannt2](https://github.com/user-attachments/assets/cbcff00e-7dff-4c7e-a43f-80f94ffbf941)
-![Unbenannt3](https://github.com/user-attachments/assets/701a8a3a-62b3-4e72-9a72-30dc63ee9b65)
+![Unbenannt2](https://github.com/user-attachments/assets/6b66c3d6-e9f5-42d3-8eee-86281e4e5afa)
+![Unbenannt3](https://github.com/user-attachments/assets/d7ac7468-159d-47d2-b050-4e262d03a097)
 ![Unbenannt8](https://github.com/user-attachments/assets/84376b27-d69f-422d-8a1f-ab51cf7be225)
 
 
@@ -30,3 +30,4 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Wechseln von Attacken und Teammitgliedern
 - Im Pokemonkampf Wechseln, Items nutzen und flüchten einbauen
 - Währung einbauen die man dann in einem Shop gegen Items eintauschen kann
+- Fangrate abhängig machen vom Pokeball den man eingesetzt hat
