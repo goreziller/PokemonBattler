@@ -108,15 +108,18 @@ public class FightController implements Initializable
                 dragonTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
                 {
                     HBox hBox = new HBox();
+                    int widthSize = 20;
+                    int heightSize = 20;
+
                     Image img = new Image("file:src/main/Bilder/" + dragonTypes.get(i).getPng1());
                     ImageView view = new ImageView(img);
-                    view.setFitWidth(16);
-                    view.setFitHeight(16);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
 
                     Image img1 = new Image("file:src/main/Bilder/" + dragonTypes.get(i).getPng2());
                     ImageView view1 = new ImageView(img1);
-                    view1.setFitWidth(16);
-                    view1.setFitHeight(16);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
 
                     hBox.getChildren().addAll(view, view1);
                     pokemonname.setGraphic(hBox);
@@ -130,8 +133,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/FireType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
 
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
@@ -140,8 +143,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/WaterType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -149,8 +152,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/GrassType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -158,8 +161,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/BugType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -167,8 +170,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/DarkType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -176,8 +179,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/DragonType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -185,8 +188,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/ElectricType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -194,8 +197,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/FairyType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -203,8 +206,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/FightingType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -212,8 +215,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/FlyingType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -221,8 +224,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/GhostType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -230,8 +233,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/GroundType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -239,8 +242,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/IceType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -248,8 +251,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/NormalType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -257,8 +260,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/PoisonType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -266,8 +269,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/PsychicType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -275,8 +278,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/RockType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -284,8 +287,8 @@ public class FightController implements Initializable
             {
                 Image img = new Image("file:src/main/Bilder/SteelType.png");
                 ImageView view = new ImageView(img);
-                view.setFitWidth(16);
-                view.setFitHeight(16);
+                view.setFitWidth(20);
+                view.setFitHeight(20);
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
             }
@@ -370,8 +373,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FireType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -382,8 +385,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FireType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -394,8 +397,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FireType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -406,8 +409,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FireType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -420,8 +423,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/WaterType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -432,8 +435,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/WaterType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -444,8 +447,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/WaterType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -456,8 +459,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/WaterType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -470,8 +473,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/NormalType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -482,8 +485,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/NormalType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -494,8 +497,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/NormalType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -506,8 +509,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/NormalType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -520,8 +523,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/BugType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -532,8 +535,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/BugType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -544,8 +547,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/BugType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -556,8 +559,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/BugType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -570,8 +573,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/DarkType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -582,8 +585,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/DarkType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -594,8 +597,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/DarkType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -606,8 +609,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/DarkType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -620,8 +623,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/DragonType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -632,8 +635,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/DragonType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -644,8 +647,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/DragonType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -656,8 +659,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/DragonType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -670,8 +673,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/ElecticType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -682,8 +685,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/ElecticType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -694,8 +697,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/ElecticType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -706,8 +709,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/ElecticType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -720,8 +723,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FairyType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -732,8 +735,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FairyType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -744,8 +747,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FairyType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -756,8 +759,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FairyType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -770,8 +773,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FightingType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -782,8 +785,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FightingType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -794,8 +797,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FightingType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -806,8 +809,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FightingType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -820,8 +823,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FlyingType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -832,8 +835,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FlyingType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -844,8 +847,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FlyingType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -856,8 +859,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/FlyingType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -870,8 +873,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GhostType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -882,8 +885,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GhostType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -894,8 +897,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GhostType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -906,8 +909,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GhostType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -920,8 +923,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GrassType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -932,8 +935,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GrassType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -944,8 +947,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GrassType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -956,8 +959,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GrassType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -970,8 +973,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GroundType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -982,8 +985,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GroundType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -994,8 +997,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GroundType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1006,8 +1009,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/GroundType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1020,8 +1023,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/IceType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1032,8 +1035,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/IceType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1044,8 +1047,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/IceType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1056,8 +1059,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/IceType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1070,8 +1073,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/PoisonType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1082,8 +1085,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/PoisonType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1094,8 +1097,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/PoisonType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1106,8 +1109,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/PoisonType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1120,8 +1123,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/PsychicType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1132,8 +1135,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/PsychicType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1144,8 +1147,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/PsychicType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1156,8 +1159,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/PsychicType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1170,8 +1173,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/RockType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1182,8 +1185,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/RockType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1194,8 +1197,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/RockType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1206,8 +1209,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/RockType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1220,8 +1223,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/SteelType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move1.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1232,8 +1235,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/SteelType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move2.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1244,8 +1247,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/SteelType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move3.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
@@ -1256,8 +1259,8 @@ public class FightController implements Initializable
         {
             Image img = new Image("file:src/main/Bilder/SteelType.png");
             ImageView view = new ImageView(img);
-            view.setFitWidth(16);
-            view.setFitHeight(16);
+            view.setFitWidth(20);
+            view.setFitHeight(20);
             move4.setGraphic(view);
             String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
             moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
