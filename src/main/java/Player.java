@@ -1,3 +1,5 @@
+import lombok.Getter;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.io.Serializable;
@@ -8,6 +10,8 @@ public class Player implements Serializable
     private Statistik statistik;
     private ArrayList<Pokemon> pokemonliste;
     private int level;
+    @Getter
+    private int stage;
     private int selectedIndex = 0;
 
     public Player()
@@ -15,6 +19,7 @@ public class Player implements Serializable
         pokemonliste = new ArrayList<Pokemon>();
         statistik = new Statistik();
         level = 1;
+        stage = 1;
     }
 
     public Player(Pokemon p, String name)
@@ -53,6 +58,19 @@ public class Player implements Serializable
     public void setSelectedIndex(int selectedIndex)
     {
         this.selectedIndex = selectedIndex;
+    }
+
+    public void newStage()
+    {
+        if(stage > 3)
+        {
+            newLevel();
+            stage = 1;
+        }
+        else
+        {
+            stage++;
+        }
     }
 
     public void newLevel()

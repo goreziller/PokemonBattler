@@ -47,8 +47,9 @@ public class PlayerController implements Initializable
     @FXML private Button buttonslot4;
     @FXML private Button buttonslot5;
     @FXML private Button buttonslot6;
+    @FXML private Label stage;
     private boolean update = true;
-    private static Stage stage;
+    private static Stage newstage;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -136,6 +137,7 @@ public class PlayerController implements Initializable
         playername.setText(SelectPokemonController.getPlayer().getName());
         t.start();
         level.setText(String.valueOf(SelectPokemonController.getPlayer().getLevel()));
+        stage.setText(String.valueOf(SelectPokemonController.getPlayer().getStage()));
         win.setText(String.valueOf(SelectPokemonController.getPlayer().getStatistik().getSiege()));
         lose.setText(String.valueOf(SelectPokemonController.getPlayer().getStatistik().getNiederlagen()));
         updateButton();
@@ -306,20 +308,20 @@ public class PlayerController implements Initializable
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource("GameMenu.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 630, 400);
-            stage = new Stage();
-            stage.setTitle("Game Menü");
-            stage.setScene(scene);
-            stage.getIcons().add(new Image("file:src/main/Bilder/GameIcon.png"));
-            stage.setOnCloseRequest(e ->
+            newstage = new Stage();
+            newstage.setTitle("Game Menü");
+            newstage.setScene(scene);
+            newstage.getIcons().add(new Image("file:src/main/Bilder/GameIcon.png"));
+            newstage.setOnCloseRequest(e ->
             {
-                stage.close();
+                newstage.close();
                 SelectPokemonController.getPlayer().getStatistik().stopTimer();
                 StoredDataManagement storedDataManagement = new StoredDataManagement();
                 storedDataManagement.playerSave(SelectPokemonController.getPlayer());
                 System.out.println("Fenster geschlossen");
                 System.exit(0);
             });
-            stage.show();
+            newstage.show();
         }
         catch (IOException e)
         {
@@ -371,9 +373,9 @@ public class PlayerController implements Initializable
         updateButton();
     }
 
-    public static Stage getStage()
+    public static Stage getNewstage()
     {
-        return stage;
+        return newstage;
     }
 
     public void reloadMenue()

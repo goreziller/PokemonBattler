@@ -23,7 +23,8 @@ public class GameController implements Initializable
     @FXML private Button button2;
     @FXML private Button button3;
     @FXML private Label level;
-    private static Stage stage;
+    @FXML private Label stage;
+    private static Stage newstage;
     private int fieldOneNumber = (int) (Math.random() * 100);
     private int fieldTwoNumber = (int) (Math.random() * 100);
     private int fieldThreeNumber = (int) (Math.random() * 100);
@@ -41,6 +42,7 @@ public class GameController implements Initializable
         Background bg = new Background(bgimage);
         pane.setBackground(bg);
         level.setText(String.valueOf(SelectPokemonController.getPlayer().getLevel()));
+        stage.setText(String.valueOf(SelectPokemonController.getPlayer().getStage()));
         decideWhichField(fieldOneNumber, field1, button1);
         decideWhichField(fieldTwoNumber, field2, button2);
         decideWhichField(fieldThreeNumber, field3, button3);
@@ -68,33 +70,33 @@ public class GameController implements Initializable
 
     public void createButtonAction(String path, boolean kampf)
     {
-        PlayerController.getStage().close();
+        PlayerController.getNewstage().close();
         try
         {
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(getClass().getResource(path));
             Scene scene = new Scene(fxmlLoader.load(), 630, 400);
-            stage = new Stage();
+            newstage = new Stage();
             if(kampf)
             {
-                stage.setTitle("Kampf Menü");
+                newstage.setTitle("Kampf Menü");
             }
             else
             {
-                stage.setTitle("Fang Menü");
+                newstage.setTitle("Fang Menü");
             }
-            stage.setScene(scene);
-            stage.getIcons().add(new Image("file:src/main/Bilder/GameIcon.png"));
-            stage.setOnCloseRequest(e ->
+            newstage.setScene(scene);
+            newstage.getIcons().add(new Image("file:src/main/Bilder/GameIcon.png"));
+            newstage.setOnCloseRequest(e ->
             {
-                stage.close();
+                newstage.close();
                 SelectPokemonController.getPlayer().getStatistik().stopTimer();
                 StoredDataManagement storedDataManagement = new StoredDataManagement();
                 storedDataManagement.playerSave(SelectPokemonController.getPlayer());
                 System.out.println("Fenster geschlossen");
                 System.exit(0);
             });
-            stage.show();
+            newstage.show();
         }
         catch (IOException e)
         {
@@ -111,14 +113,14 @@ public class GameController implements Initializable
         thread.start();
     }
 
-    public static Stage getStage()
+    public static Stage getNewstage()
     {
-        return stage;
+        return newstage;
     }
 
     public void returnToMenue()
     {
-        PlayerController.getStage().close();
+        PlayerController.getNewstage().close();
         try
         {
             FXMLLoader fxmlLoader = new FXMLLoader();

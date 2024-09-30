@@ -1306,13 +1306,13 @@ public class FightController implements Initializable
         if (currentenemyhp <= 0)
         {
             SelectPokemonController.getPlayer().getStatistik().neuerSieg();
-            SelectPokemonController.getPlayer().newLevel();
+            SelectPokemonController.getPlayer().newStage();
             returnToMenue();
         }
         else if(currenthp <= 0)
         {
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
-            SelectPokemonController.getPlayer().newLevel();
+            SelectPokemonController.getPlayer().newStage();
             SelectPokemonController.getPlayer().getPokemonliste().get(slot).newLevel();
             returnToMenue();
         }
@@ -1333,14 +1333,14 @@ public class FightController implements Initializable
         if (currentenemyhp <= 0)
         {
             SelectPokemonController.getPlayer().getStatistik().neuerSieg();
-            SelectPokemonController.getPlayer().newLevel();
+            SelectPokemonController.getPlayer().newStage();
             SelectPokemonController.getPlayer().getPokemonliste().get(slot).newLevel();
             returnToMenue();
         }
         else if(currenthp <= 0)
         {
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
-            SelectPokemonController.getPlayer().newLevel();
+            SelectPokemonController.getPlayer().newStage();
             returnToMenue();
         }
     }
@@ -1360,14 +1360,14 @@ public class FightController implements Initializable
         if (currentenemyhp <= 0)
         {
             SelectPokemonController.getPlayer().getStatistik().neuerSieg();
-            SelectPokemonController.getPlayer().newLevel();
+            SelectPokemonController.getPlayer().newStage();
             SelectPokemonController.getPlayer().getPokemonliste().get(slot).newLevel();
             returnToMenue();
         }
         else if(currenthp <= 0)
         {
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
-            SelectPokemonController.getPlayer().newLevel();
+            SelectPokemonController.getPlayer().newStage();
             returnToMenue();
         }
     }
@@ -1386,21 +1386,21 @@ public class FightController implements Initializable
         if (currentenemyhp <= 0)
         {
             SelectPokemonController.getPlayer().getStatistik().neuerSieg();
-            SelectPokemonController.getPlayer().newLevel();
+            SelectPokemonController.getPlayer().newStage();
             SelectPokemonController.getPlayer().getPokemonliste().get(slot).newLevel();
             returnToMenue();
         }
         else if(currenthp <= 0)
         {
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
-            SelectPokemonController.getPlayer().newLevel();
+            SelectPokemonController.getPlayer().newStage();
             returnToMenue();
         }
     }
 
     public void returnToMenue()
     {
-        GameController.getStage().close();
+        GameController.getNewstage().close();
         try
         {
             FXMLLoader fxmlLoader = new FXMLLoader();

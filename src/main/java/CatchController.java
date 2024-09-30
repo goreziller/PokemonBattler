@@ -111,7 +111,7 @@ public class CatchController implements Initializable
             default:
                 break;
         }
-        SelectPokemonController.getPlayer().newLevel();
+        SelectPokemonController.getPlayer().newStage();
         button1.setVisible(false);
         button2.setVisible(false);
         button3.setVisible(false);
@@ -133,7 +133,7 @@ public class CatchController implements Initializable
 
     public void returnToMenue()
     {
-        GameController.getStage().close();
+        GameController.getNewstage().close();
         try
         {
             FXMLLoader fxmlLoader = new FXMLLoader();
