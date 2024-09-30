@@ -11,6 +11,8 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class FightController implements Initializable
@@ -38,6 +40,24 @@ public class FightController implements Initializable
     private int enemyDamage;
     private int randomAttack;
     private Pokemon p;
+    private ArrayList<Types> fireTypes;
+    private ArrayList<Types> waterTypes;
+    private ArrayList<Types> grassTypes;
+    private ArrayList<Types> normalTypes;
+    private ArrayList<Types> steelTypes;
+    private ArrayList<Types> fairyTypes;
+    private ArrayList<Types> bugTypes;
+    private ArrayList<Types> darkTypes;
+    private ArrayList<Types> electricTypes;
+    private ArrayList<Types> fightingTypes;
+    private ArrayList<Types> flyingTypes;
+    private ArrayList<Types> ghostTypes;
+    private ArrayList<Types> groundTypes;
+    private ArrayList<Types> iceTypes;
+    private ArrayList<Types> poisonTypes;
+    private ArrayList<Types> psychicTypes;
+    private ArrayList<Types> rockTypes;
+    private ArrayList<Types> dragonTypes;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
@@ -81,25 +101,37 @@ public class FightController implements Initializable
 
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().size() == 2)
         {
+            loadDatabaseInfos();
+            for (int i = 0; i < dragonTypes.size(); i++)
+            {
+                if(dragonTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                dragonTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    Image img = new Image("file:src/main/Bilder/" + dragonTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(16);
+                    view.setFitHeight(16);
 
+                    Image img1 = new Image("file:src/main/Bilder/" + dragonTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(16);
+                    view1.setFitHeight(16);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
         }
         else
         {
             if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire"))
             {
-                //HBox hBox = new HBox();
-
                 Image img = new Image("file:src/main/Bilder/FireType.png");
                 ImageView view = new ImageView(img);
                 view.setFitWidth(16);
                 view.setFitHeight(16);
-
-                //Image img1 = new Image("file:src/main/Bilder/WaterType.png");
-                //ImageView view1 = new ImageView(img1);
-                //view1.setFitWidth(16);
-                //view1.setFitHeight(16);
-
-                //hBox.getChildren().addAll(view, view1);
 
                 pokemonname.setGraphic(view);
                 pokemonname.setText(pokemonName);
@@ -266,6 +298,30 @@ public class FightController implements Initializable
         showhp.setText(currenthp + " / " +  hp);
 
         createRandomEnemy();
+    }
+
+    public void loadDatabaseInfos()
+    {
+        try(Connection conn = DriverManager.getConnection(DatabaseEnum.PokemonTypesPath.getPath()))
+        {
+            //Dragon Types
+            dragonTypes = new ArrayList<>();
+            String dragonSql = "Select Type1, Type2, Png1, Png2 FROM DragonTypes";
+            Statement dragonStmt = conn.createStatement();
+            ResultSet dragonRs = dragonStmt.executeQuery(dragonSql);
+
+            while (dragonRs.next())
+            {
+                Types newdragontypes = new Types(dragonRs.getString("Type1"), dragonRs.getString("Type2"), dragonRs.getString("Png1"), dragonRs.getString("Png2"));
+                dragonTypes.add(newdragontypes);
+            }
+            
+
+        }
+        catch (SQLException ex)
+        {
+            ex.printStackTrace();
+        }
     }
 
     public void createRandomEnemy()
