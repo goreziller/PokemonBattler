@@ -8,7 +8,7 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 
 ![Unbenannt2](https://github.com/user-attachments/assets/6b66c3d6-e9f5-42d3-8eee-86281e4e5afa)
 ![Unbenannt3](https://github.com/user-attachments/assets/d7ac7468-159d-47d2-b050-4e262d03a097)
-![Unbenannt8](https://github.com/user-attachments/assets/84376b27-d69f-422d-8a1f-ab51cf7be225)
+![Unbenannt8](https://github.com/user-attachments/assets/cf037af4-e836-4a4f-8513-438b24054315)
 
 
 ## Features
