@@ -27,15 +27,24 @@
             <Font name="System Bold" size="14.0" />
          </font></Button>
       <Label layoutX="20.0" layoutY="110.0" prefHeight="120" prefWidth="150" style="-fx-border-color: black;" />
-      <Label alignment="CENTER" layoutX="112.0" layoutY="68.0" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-text-fill: white;" text="Aktuelle Ebene">
+      <Label alignment="CENTER" layoutX="72.0" layoutY="68.0" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-text-fill: white;" text="Aktuelle Ebene">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="level" alignment="CENTER" layoutX="358.0" layoutY="68.0" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-text-fill: white;">
+      <Label fx:id="level" alignment="CENTER" layoutX="222.0" layoutY="68.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-text-fill: white;">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
       <Label layoutX="220.0" layoutY="110.0" prefHeight="120" prefWidth="150" style="-fx-border-color: black;" />
       <Label layoutX="420.0" layoutY="110.0" prefHeight="120" prefWidth="150" style="-fx-border-color: black;" />
+      <Label alignment="CENTER" layoutX="322.0" layoutY="68.0" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-text-fill: white;" text="Stage">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="stage" alignment="CENTER" layoutX="452.0" layoutY="68.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e); -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
