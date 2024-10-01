@@ -10,4 +10,9 @@ public enum DatabaseEnum
     }
     @Getter
     private String path;
+
+    public String getPath()
+    {
+        return path;
+    }
 }

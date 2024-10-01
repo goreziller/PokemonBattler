@@ -294,7 +294,6 @@ public class FightController implements Initializable
             }
         }
 
-        //pokemonname.setText(pokemonName);
         pokemonlevel.setText("Lv." + SelectPokemonController.getPlayer().getPokemonliste().get(slot).getLevel());
         hp = (int) Math.round(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getStats().get(0).getBase_stat() * (1 + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getLevel() * 0.02)));
         currenthp = hp;
@@ -319,7 +318,209 @@ public class FightController implements Initializable
                 dragonTypes.add(newdragontypes);
             }
             
+            //Fire Types
+            fireTypes = new ArrayList<>();
+            String fireSql = "Select Type1, Type2, Png1, Png2 FROM FireTypes";
+            Statement fireStmt = conn.createStatement();
+            ResultSet fireRs = fireStmt.executeQuery(fireSql);
 
+            while (fireRs.next())
+            {
+                Types newfiretypes = new Types(fireRs.getString("Type1"), fireRs.getString("Type2"), fireRs.getString("Png1"), fireRs.getString("Png2"));
+                fireTypes.add(newfiretypes);
+            }
+
+            //Water Types
+            waterTypes = new ArrayList<>();
+            String waterSql = "Select Type1, Type2, Png1, Png2 FROM WaterTypes";
+            Statement waterStmt = conn.createStatement();
+            ResultSet waterRs = waterStmt.executeQuery(waterSql);
+
+            while (waterRs.next())
+            {
+                Types newwatertypes = new Types(waterRs.getString("Type1"), waterRs.getString("Type2"), waterRs.getString("Png1"), waterRs.getString("Png2"));
+                waterTypes.add(newwatertypes);
+            }
+
+            //Grass Types
+            grassTypes = new ArrayList<>();
+            String grassSql = "Select Type1, Type2, Png1, Png2 FROM GrassTypes";
+            Statement grassStmt = conn.createStatement();
+            ResultSet grassRs = grassStmt.executeQuery(grassSql);
+
+            while (grassRs.next())
+            {
+                Types newgrasstypes = new Types(grassRs.getString("Type1"), grassRs.getString("Type2"), grassRs.getString("Png1"), grassRs.getString("Png2"));
+                grassTypes.add(newgrasstypes);
+            }
+
+            //Normal Types
+            normalTypes = new ArrayList<>();
+            String normalSql = "Select Type1, Type2, Png1, Png2 FROM NormalTypes";
+            Statement normalStmt = conn.createStatement();
+            ResultSet normalRs = normalStmt.executeQuery(normalSql);
+
+            while (normalRs.next())
+            {
+                Types newnormaltypes = new Types(normalRs.getString("Type1"), normalRs.getString("Type2"), normalRs.getString("Png1"), normalRs.getString("Png2"));
+                normalTypes.add(newnormaltypes);
+            }
+
+            //Bug Types
+            bugTypes = new ArrayList<>();
+            String bugSql = "Select Type1, Type2, Png1, Png2 FROM BugTypes";
+            Statement bugStmt = conn.createStatement();
+            ResultSet bugRs = bugStmt.executeQuery(bugSql);
+
+            while (bugRs.next())
+            {
+                Types newbugtypes = new Types(bugRs.getString("Type1"), bugRs.getString("Type2"), bugRs.getString("Png1"), bugRs.getString("Png2"));
+                bugTypes.add(newbugtypes);
+            }
+
+            //Steel Types
+            steelTypes = new ArrayList<>();
+            String steelSql = "Select Type1, Type2, Png1, Png2 FROM SteelTypes";
+            Statement steelStmt = conn.createStatement();
+            ResultSet steelRs = steelStmt.executeQuery(steelSql);
+
+            while (steelRs.next())
+            {
+                Types newsteeltypes = new Types(steelRs.getString("Type1"), steelRs.getString("Type2"), steelRs.getString("Png1"), steelRs.getString("Png2"));
+                steelTypes.add(newsteeltypes);
+            }
+
+            //Fairy Types
+            fairyTypes = new ArrayList<>();
+            String fairySql = "Select Type1, Type2, Png1, Png2 FROM FairyTypes";
+            Statement fairyStmt = conn.createStatement();
+            ResultSet fairyRs = fairyStmt.executeQuery(fairySql);
+
+            while (fairyRs.next())
+            {
+                Types newfairytypes = new Types(fairyRs.getString("Type1"), fairyRs.getString("Type2"), fairyRs.getString("Png1"), fairyRs.getString("Png2"));
+                fairyTypes.add(newfairytypes);
+            }
+
+            //Dark Types
+            darkTypes = new ArrayList<>();
+            String darkSql = "Select Type1, Type2, Png1, Png2 FROM DarkTypes";
+            Statement darkStmt = conn.createStatement();
+            ResultSet darkRs = darkStmt.executeQuery(darkSql);
+
+            while (darkRs.next())
+            {
+                Types newdarktypes = new Types(darkRs.getString("Type1"), darkRs.getString("Type2"), darkRs.getString("Png1"), darkRs.getString("Png2"));
+                darkTypes.add(newdarktypes);
+            }
+
+            //Electric Types
+            electricTypes = new ArrayList<>();
+            String electricSql = "Select Type1, Type2, Png1, Png2 FROM ElectricTypes";
+            Statement electricStmt = conn.createStatement();
+            ResultSet electricRs = electricStmt.executeQuery(electricSql);
+
+            while (electricRs.next())
+            {
+                Types newelectrictypes = new Types(electricRs.getString("Type1"), electricRs.getString("Type2"), electricRs.getString("Png1"), electricRs.getString("Png2"));
+                electricTypes.add(newelectrictypes);
+            }
+
+            //Fighting Types
+            fightingTypes = new ArrayList<>();
+            String fightingSql = "Select Type1, Type2, Png1, Png2 FROM FightingTypes";
+            Statement fightingStmt = conn.createStatement();
+            ResultSet fightingRs = fightingStmt.executeQuery(fightingSql);
+
+            while (fightingRs.next())
+            {
+                Types newfightingtypes = new Types(fightingRs.getString("Type1"), fightingRs.getString("Type2"), fightingRs.getString("Png1"), fightingRs.getString("Png2"));
+                fightingTypes.add(newfightingtypes);
+            }
+
+            //Flying Types
+            flyingTypes = new ArrayList<>();
+            String flyingSql = "Select Type1, Type2, Png1, Png2 FROM FlyingTypes";
+            Statement flyingStmt = conn.createStatement();
+            ResultSet flyingRs = flyingStmt.executeQuery(flyingSql);
+
+            while (flyingRs.next())
+            {
+                Types newflyingtypes = new Types(flyingRs.getString("Type1"), flyingRs.getString("Type2"), flyingRs.getString("Png1"), flyingRs.getString("Png2"));
+                flyingTypes.add(newflyingtypes);
+            }
+
+            //Ghost Types
+            ghostTypes = new ArrayList<>();
+            String ghostSql = "Select Type1, Type2, Png1, Png2 FROM GhostTypes";
+            Statement ghostStmt = conn.createStatement();
+            ResultSet ghostRs = ghostStmt.executeQuery(ghostSql);
+
+            while (ghostRs.next())
+            {
+                Types newghosttypes = new Types(ghostRs.getString("Type1"), ghostRs.getString("Type2"), ghostRs.getString("Png1"), ghostRs.getString("Png2"));
+                ghostTypes.add(newghosttypes);
+            }
+
+            //Ground Types
+            groundTypes = new ArrayList<>();
+            String groundSql = "Select Type1, Type2, Png1, Png2 FROM GroundTypes";
+            Statement groundStmt = conn.createStatement();
+            ResultSet groundRs = groundStmt.executeQuery(groundSql);
+
+            while (groundRs.next())
+            {
+                Types newgroundtypes = new Types(groundRs.getString("Type1"), groundRs.getString("Type2"), groundRs.getString("Png1"), groundRs.getString("Png2"));
+                groundTypes.add(newgroundtypes);
+            }
+
+            //Ice Types
+            iceTypes = new ArrayList<>();
+            String iceSql = "Select Type1, Type2, Png1, Png2 FROM IceTypes";
+            Statement iceStmt = conn.createStatement();
+            ResultSet iceRs = iceStmt.executeQuery(iceSql);
+
+            while (iceRs.next())
+            {
+                Types newicetypes = new Types(iceRs.getString("Type1"), iceRs.getString("Type2"), iceRs.getString("Png1"), iceRs.getString("Png2"));
+                iceTypes.add(newicetypes);
+            }
+
+            //Poison Types
+            poisonTypes = new ArrayList<>();
+            String poisonSql = "Select Type1, Type2, Png1, Png2 FROM PoisonTypes";
+            Statement poisonStmt = conn.createStatement();
+            ResultSet poisonRs = poisonStmt.executeQuery(poisonSql);
+
+            while (poisonRs.next())
+            {
+                Types newpoisontypes = new Types(poisonRs.getString("Type1"), poisonRs.getString("Type2"), poisonRs.getString("Png1"), poisonRs.getString("Png2"));
+                poisonTypes.add(newpoisontypes);
+            }
+
+            //Psychic Types
+            psychicTypes = new ArrayList<>();
+            String psychicSql = "Select Type1, Type2, Png1, Png2 FROM PsychicTypes";
+            Statement psychicStmt = conn.createStatement();
+            ResultSet psychicRs = psychicStmt.executeQuery(psychicSql);
+
+            while (psychicRs.next())
+            {
+                Types newpoisontypes = new Types(psychicRs.getString("Type1"), psychicRs.getString("Type2"), psychicRs.getString("Png1"), psychicRs.getString("Png2"));
+                psychicTypes.add(newpoisontypes);
+            }
+
+            //Rock Types
+            rockTypes = new ArrayList<>();
+            String rockSql = "Select Type1, Type2, Png1, Png2 FROM RockTypes";
+            Statement rockStmt = conn.createStatement();
+            ResultSet rockRs = rockStmt.executeQuery(rockSql);
+
+            while (rockRs.next())
+            {
+                Types newrocktypes = new Types(rockRs.getString("Type1"), rockRs.getString("Type2"), rockRs.getString("Png1"), rockRs.getString("Png2"));
+                rockTypes.add(newrocktypes);
+            }
         }
         catch (SQLException ex)
         {

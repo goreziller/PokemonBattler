@@ -18,4 +18,24 @@ public class Types
         this.Png1 = png1;
         this.Png2 = png2;
     }
+
+    public String getType1()
+    {
+        return Type1;
+    }
+
+    public String getType2()
+    {
+        return Type2;
+    }
+
+    public String getPng1()
+    {
+        return Png1;
+    }
+
+    public String getPng2()
+    {
+        return Png2;
+    }
 }
