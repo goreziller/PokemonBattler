@@ -12,6 +12,8 @@ public class Player implements Serializable
     private int level;
     @Getter
     private int stage;
+    @Getter
+    private int coins;
     private int selectedIndex = 0;
 
     public Player()
@@ -20,6 +22,7 @@ public class Player implements Serializable
         statistik = new Statistik();
         level = 1;
         stage = 1;
+        coins = 0;
     }
 
     public Player(Pokemon p, String name)

@@ -28,6 +28,7 @@ public class PlayerController implements Initializable
     @FXML private ImageView slot4;
     @FXML private ImageView slot5;
     @FXML private ImageView slot6;
+    @FXML private ImageView coinIcon;
     @FXML private Label playername;
     @FXML private Label gametime;
     @FXML private Label level;
@@ -48,6 +49,7 @@ public class PlayerController implements Initializable
     @FXML private Button buttonslot5;
     @FXML private Button buttonslot6;
     @FXML private Label stage;
+    @FXML private Label coins;
     private boolean update = true;
     private static Stage newstage;
 
@@ -64,6 +66,7 @@ public class PlayerController implements Initializable
         );
         Background bg = new Background(bgimage);
         pane.setBackground(bg);
+        coinIcon.setImage(new Image("file:src/main/Bilder/CoinIcon.png"));
         buttonslot1.setVisible(false);
         buttonslot2.setVisible(false);
         buttonslot3.setVisible(false);
@@ -138,6 +141,7 @@ public class PlayerController implements Initializable
         t.start();
         level.setText(String.valueOf(SelectPokemonController.getPlayer().getLevel()));
         stage.setText(String.valueOf(SelectPokemonController.getPlayer().getStage()));
+        coins.setText(String.valueOf(SelectPokemonController.getPlayer().getCoins()));
         win.setText(String.valueOf(SelectPokemonController.getPlayer().getStatistik().getSiege()));
         lose.setText(String.valueOf(SelectPokemonController.getPlayer().getStatistik().getNiederlagen()));
         updateButton();

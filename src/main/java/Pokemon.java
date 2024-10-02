@@ -133,7 +133,10 @@ public class Pokemon implements Serializable
 
     public void newLevel()
     {
-        this.level++;
+        if(this.level < 100)
+        {
+            this.level++;
+        }
     }
 
     @Override
