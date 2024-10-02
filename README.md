@@ -33,3 +33,4 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Währung einbauen die man dann in einem Shop gegen Items eintauschen kann
 - Fangrate abhängig machen vom Pokeball den man eingesetzt hat
 - Statuseffekte
+- Entwicklungen bei bestimmten lvl oder Items durchführen
