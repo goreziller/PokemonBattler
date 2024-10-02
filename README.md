@@ -34,3 +34,4 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Fangrate abhängig machen vom Pokeball den man eingesetzt hat
 - Statuseffekte
 - Entwicklungen bei bestimmten lvl oder Items durchführen
+- Pokemon Übersicht einbauen wo man das Wesen, Fähigkeit, IV's, EV's etc. einsehen kann
