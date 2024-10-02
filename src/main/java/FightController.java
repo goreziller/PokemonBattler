@@ -39,6 +39,8 @@ public class FightController implements Initializable
     private int playerDamage;
     private int enemyDamage;
     private int randomAttack;
+    private int widthSize;
+    private int heightSize;
     private Pokemon p;
     private ArrayList<Types> fireTypes;
     private ArrayList<Types> waterTypes;
@@ -102,14 +104,120 @@ public class FightController implements Initializable
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().size() == 2)
         {
             loadDatabaseInfos();
+
+            //Normal Types
+            for(int i = 0; i < normalTypes.size(); i++)
+            {
+                if(normalTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                normalTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + normalTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + normalTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Fire Types
+            for(int i = 0; i < fireTypes.size(); i++)
+            {
+                if(fireTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        fireTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + fireTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + fireTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Water Types
+            for(int i = 0; i < waterTypes.size(); i++)
+            {
+                if(waterTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        waterTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + waterTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + waterTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Grass Types
+            for(int i = 0; i < grassTypes.size(); i++)
+            {
+                if(grassTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        grassTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + grassTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + grassTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Dragon Types
             for (int i = 0; i < dragonTypes.size(); i++)
             {
                 if(dragonTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
                 dragonTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
                 {
                     HBox hBox = new HBox();
-                    int widthSize = 20;
-                    int heightSize = 20;
+                    widthSize = 20;
+                    heightSize = 20;
 
                     Image img = new Image("file:src/main/Bilder/" + dragonTypes.get(i).getPng1());
                     ImageView view = new ImageView(img);
@@ -117,6 +225,344 @@ public class FightController implements Initializable
                     view.setFitHeight(heightSize);
 
                     Image img1 = new Image("file:src/main/Bilder/" + dragonTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Bug Types
+            for(int i = 0; i < bugTypes.size(); i++)
+            {
+                if(bugTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        bugTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + bugTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + bugTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Steel Types
+            for(int i = 0; i < steelTypes.size(); i++)
+            {
+                if(steelTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        steelTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + steelTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + steelTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Fairy Types
+            for(int i = 0; i < fairyTypes.size(); i++)
+            {
+                if(fairyTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        fairyTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + fairyTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + fairyTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Dark Types
+            for(int i = 0; i < darkTypes.size(); i++)
+            {
+                if(darkTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        darkTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + darkTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + darkTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Electric Types
+            for(int i = 0; i < electricTypes.size(); i++)
+            {
+                if(electricTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        electricTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + electricTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + electricTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Flying Types
+            for(int i = 0; i < flyingTypes.size(); i++)
+            {
+                if(flyingTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        flyingTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + flyingTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + flyingTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Ghost Types
+            for(int i = 0; i < ghostTypes.size(); i++)
+            {
+                if(ghostTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        ghostTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + ghostTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + ghostTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Fighting Types
+            for(int i = 0; i < fightingTypes.size(); i++)
+            {
+                if(fightingTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        fightingTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + fightingTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + fightingTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Ground Types
+            for(int i = 0; i < groundTypes.size(); i++)
+            {
+                if(groundTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        groundTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + groundTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + groundTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Ice Types
+            for(int i = 0; i < iceTypes.size(); i++)
+            {
+                if(iceTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        iceTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + iceTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + iceTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Poison Types
+            for(int i = 0; i < poisonTypes.size(); i++)
+            {
+                if(poisonTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        poisonTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + poisonTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + poisonTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Rock Types
+            for(int i = 0; i < rockTypes.size(); i++)
+            {
+                if(rockTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        rockTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + rockTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + rockTypes.get(i).getPng2());
+                    ImageView view1 = new ImageView(img1);
+                    view1.setFitWidth(widthSize);
+                    view1.setFitHeight(heightSize);
+
+                    hBox.getChildren().addAll(view, view1);
+                    pokemonname.setGraphic(hBox);
+                    pokemonname.setText(pokemonName);
+                }
+            }
+
+            //Psychic Types
+            for(int i = 0; i < psychicTypes.size(); i++)
+            {
+                if(psychicTypes.get(i).getType1().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName()) &&
+                        psychicTypes.get(i).getType2().equals(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName()))
+                {
+                    HBox hBox = new HBox();
+                    widthSize = 20;
+                    heightSize = 20;
+
+                    Image img = new Image("file:src/main/Bilder/" + psychicTypes.get(i).getPng1());
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(widthSize);
+                    view.setFitHeight(heightSize);
+
+                    Image img1 = new Image("file:src/main/Bilder/" + psychicTypes.get(i).getPng2());
                     ImageView view1 = new ImageView(img1);
                     view1.setFitWidth(widthSize);
                     view1.setFitHeight(heightSize);
