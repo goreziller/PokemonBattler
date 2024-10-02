@@ -16,10 +16,11 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Pokemon können ins Team aufgenommen werden
 - Es werden die Spielzeit sowie die Siege und Niederlagen getracket
 - Spiel kann jederzeit gespeichert werden und ein Spielstand kann auch wieder geladen werden
+- Pokemon Icon Types werden beim jeweiligen Pokemon angezeigt
+- Attacken werden in der jeweiligen Farbe des Types angezeigt und deren Typ Icon
+- Ebenen bestehen aus jeweils 4 Stages
 
 ## Geplante Features
-- ~~Attacken in der jeweiligen Farbe des Types anezeigen lassen + Typ Icon~~
-- ~~Längere Ebenen durch Stages~~
 - Typen Effektivität wird aktuell noch nicht berücksichtig
 - Scaling der Gegner
 - Mehr Auswahlfelder nach jeder Ebene
