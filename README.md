@@ -23,6 +23,8 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 ## Geplante Features
 - Typen Effektivität wird aktuell noch nicht berücksichtig
 - Scaling der Gegner
+- Anpassung von der Schadensberechnung
+- HP & Schaden Scaling abhängig vom Lvl. des Pokemon
 - Mehr Auswahlfelder nach jeder Ebene
 - Einbauen das man das Spiel auch verliegen kann
 - Optische Überarbeitung
