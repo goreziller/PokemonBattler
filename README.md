@@ -6,7 +6,7 @@
 
 Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den Ebenen hoch zu kommen.
 
-![Unbenannt2](https://github.com/user-attachments/assets/5259ca8a-ae7c-4fd3-9da0-c733e43f65b0)
+![Unbenannt2](https://github.com/user-attachments/assets/a93dfb53-f0a1-4850-806f-2c4e0f05b6eb)
 ![Unbenannt3](https://github.com/user-attachments/assets/0e0c14e6-e687-45a6-ba36-abef87ad735a)
 ![Unbenannt8](https://github.com/user-attachments/assets/cf037af4-e836-4a4f-8513-438b24054315)
 
