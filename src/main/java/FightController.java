@@ -1954,13 +1954,14 @@ public class FightController implements Initializable
         {
             SelectPokemonController.getPlayer().getStatistik().neuerSieg();
             SelectPokemonController.getPlayer().newStage();
+            SelectPokemonController.getPlayer().getPokemonliste().get(slot).newLevel();
+            SelectPokemonController.getPlayer().earnCoins();
             returnToMenue();
         }
         else if(currenthp <= 0)
         {
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
             SelectPokemonController.getPlayer().newStage();
-            SelectPokemonController.getPlayer().getPokemonliste().get(slot).newLevel();
             returnToMenue();
         }
     }
@@ -1982,6 +1983,7 @@ public class FightController implements Initializable
             SelectPokemonController.getPlayer().getStatistik().neuerSieg();
             SelectPokemonController.getPlayer().newStage();
             SelectPokemonController.getPlayer().getPokemonliste().get(slot).newLevel();
+            SelectPokemonController.getPlayer().earnCoins();
             returnToMenue();
         }
         else if(currenthp <= 0)
@@ -2009,6 +2011,7 @@ public class FightController implements Initializable
             SelectPokemonController.getPlayer().getStatistik().neuerSieg();
             SelectPokemonController.getPlayer().newStage();
             SelectPokemonController.getPlayer().getPokemonliste().get(slot).newLevel();
+            SelectPokemonController.getPlayer().earnCoins();
             returnToMenue();
         }
         else if(currenthp <= 0)
@@ -2035,6 +2038,7 @@ public class FightController implements Initializable
             SelectPokemonController.getPlayer().getStatistik().neuerSieg();
             SelectPokemonController.getPlayer().newStage();
             SelectPokemonController.getPlayer().getPokemonliste().get(slot).newLevel();
+            SelectPokemonController.getPlayer().earnCoins();
             returnToMenue();
         }
         else if(currenthp <= 0)

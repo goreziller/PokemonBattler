@@ -3,6 +3,7 @@ import lombok.Getter;
 import javax.swing.*;
 import java.util.ArrayList;
 import java.io.Serializable;
+import java.util.Random;
 
 public class Player implements Serializable
 {
@@ -14,6 +15,8 @@ public class Player implements Serializable
     private int stage;
     @Getter
     private int coins;
+    @Getter
+    private int life = 3;
     private int selectedIndex = 0;
 
     public Player()
@@ -76,6 +79,25 @@ public class Player implements Serializable
         }
     }
 
+    public void earnCoins()
+    {
+        Random rand = new Random();
+        int max = 100;
+        int min = 25;
+        coins = coins + (rand.nextInt(max - min + 1) + min);
+        System.out.println("Coins: " + coins);
+    }
+    public void loseLife()
+    {
+        if(life > 0)
+        {
+            life--;
+        }
+        else
+        {
+            //Verloren Daten löschen
+        }
+    }
     public void newLevel()
     {
         level++;
