@@ -334,6 +334,36 @@ public class PlayerController implements Initializable
         update = false;
     }
 
+    public void toShop()
+    {
+        SelectPokemonController.getStage().close();
+        try
+        {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("ShopMenu.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 630, 400);
+            newstage = new Stage();
+            newstage.setTitle("Shop Menü");
+            newstage.setScene(scene);
+            newstage.getIcons().add(new Image("file:src/main/Bilder/GameIcon.png"));
+            newstage.setOnCloseRequest(e ->
+            {
+                newstage.close();
+                SelectPokemonController.getPlayer().getStatistik().stopTimer();
+                StoredDataManagement storedDataManagement = new StoredDataManagement();
+                storedDataManagement.playerSave(SelectPokemonController.getPlayer());
+                System.out.println("Fenster geschlossen");
+                System.exit(0);
+            });
+            newstage.show();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        update = false;
+    }
+
     public void saveData()
     {
         button1.setVisible(false);
