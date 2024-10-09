@@ -989,17 +989,652 @@ public class FightController implements Initializable
             currentenemyhp = enemyhp;
             enemyimage.setImage(new Image(p.getSprites().getFront_default()));
             String enemyName = p.getName();
+            enemyName = enemyName.substring(0, 1).toUpperCase() + enemyName.substring(1).toLowerCase();
             if(p.getTypes().size() == 2)
             {
                 enemyType1 = p.getTypes().get(0).getType().getName();
                 enemyType2 = p.getTypes().get(1).getType().getName();
+
+                loadDatabaseInfos();
+
+                //Normal Types
+                for(int i = 0; i < normalTypes.size(); i++)
+                {
+                    if(normalTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            normalTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + normalTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + normalTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Fire Types
+                for(int i = 0; i < fireTypes.size(); i++)
+                {
+                    if(fireTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            fireTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + fireTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + fireTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Water Types
+                for(int i = 0; i < waterTypes.size(); i++)
+                {
+                    if(waterTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            waterTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + waterTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + waterTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Grass Types
+                for(int i = 0; i < grassTypes.size(); i++)
+                {
+                    if(grassTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            grassTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + grassTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + grassTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Dragon Types
+                for (int i = 0; i < dragonTypes.size(); i++)
+                {
+                    if(dragonTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            dragonTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + dragonTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + dragonTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Bug Types
+                for(int i = 0; i < bugTypes.size(); i++)
+                {
+                    if(bugTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            bugTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + bugTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + bugTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Steel Types
+                for(int i = 0; i < steelTypes.size(); i++)
+                {
+                    if(steelTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            steelTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + steelTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + steelTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Fairy Types
+                for(int i = 0; i < fairyTypes.size(); i++)
+                {
+                    if(fairyTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            fairyTypes.get(i).getType2().equals(p.getTypes().get(0).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + fairyTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + fairyTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Dark Types
+                for(int i = 0; i < darkTypes.size(); i++)
+                {
+                    if(darkTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            darkTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + darkTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + darkTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Electric Types
+                for(int i = 0; i < electricTypes.size(); i++)
+                {
+                    if(electricTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            electricTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + electricTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + electricTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Flying Types
+                for(int i = 0; i < flyingTypes.size(); i++)
+                {
+                    if(flyingTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            flyingTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + flyingTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + flyingTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Ghost Types
+                for(int i = 0; i < ghostTypes.size(); i++)
+                {
+                    if(ghostTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            ghostTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + ghostTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + ghostTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Fighting Types
+                for(int i = 0; i < fightingTypes.size(); i++)
+                {
+                    if(fightingTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            fightingTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + fightingTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + fightingTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Ground Types
+                for(int i = 0; i < groundTypes.size(); i++)
+                {
+                    if(groundTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            groundTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + groundTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + groundTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Ice Types
+                for(int i = 0; i < iceTypes.size(); i++)
+                {
+                    if(iceTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            iceTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + iceTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + iceTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Poison Types
+                for(int i = 0; i < poisonTypes.size(); i++)
+                {
+                    if(poisonTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            poisonTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + poisonTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + poisonTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Rock Types
+                for(int i = 0; i < rockTypes.size(); i++)
+                {
+                    if(rockTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            rockTypes.get(i).getType2().equals(p.getTypes().get(1).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + rockTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + rockTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
+
+                //Psychic Types
+                for(int i = 0; i < psychicTypes.size(); i++)
+                {
+                    if(psychicTypes.get(i).getType1().equals(p.getTypes().get(0).getType().getName()) &&
+                            psychicTypes.get(i).getType2().equals(p.getTypes().get(0).getType().getName()))
+                    {
+                        HBox hBox = new HBox();
+                        widthSize = 20;
+                        heightSize = 20;
+
+                        Image img = new Image("file:src/main/Bilder/" + psychicTypes.get(i).getPng1());
+                        ImageView view = new ImageView(img);
+                        view.setFitWidth(widthSize);
+                        view.setFitHeight(heightSize);
+
+                        Image img1 = new Image("file:src/main/Bilder/" + psychicTypes.get(i).getPng2());
+                        ImageView view1 = new ImageView(img1);
+                        view1.setFitWidth(widthSize);
+                        view1.setFitHeight(heightSize);
+
+                        hBox.getChildren().addAll(view, view1);
+                        enemyname.setGraphic(hBox);
+                        enemyname.setText(enemyName);
+                    }
+                }
             }
             else
             {
                 enemyType1 = p.getTypes().get(0).getType().getName();
+
+                if(p.getTypes().get(0).getType().getName().equals("fire"))
+                {
+                    Image img = new Image("file:src/main/Bilder/FireType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("water"))
+                {
+                    Image img = new Image("file:src/main/Bilder/WaterType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("grass"))
+                {
+                    Image img = new Image("file:src/main/Bilder/GrassType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("bug"))
+                {
+                    Image img = new Image("file:src/main/Bilder/BugType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("dark"))
+                {
+                    Image img = new Image("file:src/main/Bilder/DarkType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("dragon"))
+                {
+                    Image img = new Image("file:src/main/Bilder/DragonType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("electric"))
+                {
+                    Image img = new Image("file:src/main/Bilder/ElectricType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("fairy"))
+                {
+                    Image img = new Image("file:src/main/Bilder/FairyType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("fighting"))
+                {
+                    Image img = new Image("file:src/main/Bilder/FightingType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("flying"))
+                {
+                    Image img = new Image("file:src/main/Bilder/FlyingType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("ghost"))
+                {
+                    Image img = new Image("file:src/main/Bilder/GhostType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("ground"))
+                {
+                    Image img = new Image("file:src/main/Bilder/GroundType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("ice"))
+                {
+                    Image img = new Image("file:src/main/Bilder/IceType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("normal"))
+                {
+                    Image img = new Image("file:src/main/Bilder/NormalType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("poison"))
+                {
+                    Image img = new Image("file:src/main/Bilder/PoisonType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("psychic"))
+                {
+                    Image img = new Image("file:src/main/Bilder/PsychicType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("rock"))
+                {
+                    Image img = new Image("file:src/main/Bilder/RockType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
+                if(p.getTypes().get(0).getType().getName().equals("steel"))
+                {
+                    Image img = new Image("file:src/main/Bilder/SteelType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    enemyname.setGraphic(view);
+                    enemyname.setText(enemyName);
+                }
             }
-            enemyName = enemyName.substring(0, 1).toUpperCase() + enemyName.substring(1).toLowerCase();
-            enemyname.setText(enemyName);
+
+            //enemyname.setText(enemyName);
             enemylevel.setText("Lv." + p.getLevel());
             hpenemy.setText(currentenemyhp + " / " +  enemyhp);
         }
