@@ -2,17 +2,19 @@ import lombok.Getter;
 
 public enum DatabaseEnum
 {
-    PokemonTypesPath("jdbc:ucanaccess://src/main/resources/database/PokemonTypes.accdb");
+    PokemonTypesPath("jdbc:ucanaccess://src/main/resources/database/PokemonTypes.accdb"),
+    PokemonTypeEffectivityPath("jdbc:ucanaccess://src/main/resources/database/PokemonEffectivity.accdb");
 
-    private DatabaseEnum(String path)
-    {
-        this.path = path;
-    }
     @Getter
-    private String path;
+    private String _path;
 
     public String getPath()
     {
-        return path;
+        return _path;
+    }
+
+    private DatabaseEnum(String path)
+    {
+        this._path = path;
     }
 }

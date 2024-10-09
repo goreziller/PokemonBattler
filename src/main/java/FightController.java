@@ -63,6 +63,7 @@ public class FightController implements Initializable
     private String enemyType1;
     private String enemyType2;
     private String enemyAttackType;
+    private ArrayList<PokemonTypeEffectivity> effectivities;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -2079,42 +2080,82 @@ public class FightController implements Initializable
         }
     }
 
+    public void loadEffectivityDatabase()
+    {
+        try(Connection conn = DriverManager.getConnection(DatabaseEnum.PokemonTypeEffectivityPath.getPath()))
+        {
+            effectivities = new ArrayList<>();
+            String Sql = "Select Type1, Type2, twice, half, zero FROM PokemonEffectivity";
+            Statement Stmt = conn.createStatement();
+            ResultSet Rs = Stmt.executeQuery(Sql);
+
+            while (Rs.next())
+            {
+                PokemonTypeEffectivity effectivity = new PokemonTypeEffectivity(Rs.getString("Type1"), Rs.getString("Type2"), Rs.getBoolean("twice"), Rs.getBoolean("half"), Rs.getBoolean("zero"));
+                effectivities.add(effectivity);
+            }
+        }
+        catch (SQLException ex)
+        {
+            ex.printStackTrace();
+        }
+    }
+
     public int typeEffectivityPlayer(String attackType, int attackDamage)
     {
         if(enemyType2 == null)
         {
-            if(attackType.equals("normal") && enemyType1.equals("rock"))
+            loadEffectivityDatabase();
+
+            for(int i = 0; i < effectivities.size(); i++)
             {
-                System.out.println("Nicht sehr effektiv (normal/rock)");
-                return attackDamage / 2;
-            }
-            if(attackType.equals("ice") && enemyType1.equals("flying"))
-            {
-                System.out.println("Sehr effektiv (Ice/Flying)");
-                return attackDamage * 2;
-            }
-            else
-            {
-                return attackDamage;
+                if(attackType.equals(effectivities.get(i).getType1()) && enemyType1.equals(effectivities.get(i).getType2()))
+                {
+                    if(effectivities.get(i).isTwice())
+                    {
+                        System.out.println("Sehr effektiv");
+                        return attackDamage * 2;
+                    }
+                    else if(effectivities.get(i).isHalf())
+                    {
+                        System.out.println("Nicht sehr effektiv");
+                        return attackDamage / 2;
+                    }
+                    else
+                    {
+                        System.out.println("Hat keine Wirkung");
+                        return 0;
+                    }
+                }
             }
         }
         else
         {
-            if(attackType.equals("normal") && (enemyType1.equals("rock") || enemyType2.equals("rock")))
+            loadEffectivityDatabase();
+
+            for(int i = 0; i < effectivities.size(); i++)
             {
-                System.out.println("Nicht sehr effektiv (normal/rock)");
-                return attackDamage / 2;
-            }
-            if(attackType.equals("ice") && (enemyType1.equals("flying") || enemyType2.equals("flying")))
-            {
-                System.out.println("Sehr effektiv (Ice/Flying)");
-                return attackDamage * 2;
-            }
-            else
-            {
-                return attackDamage;
+                if(attackType.equals(effectivities.get(i).getType1()) && ( enemyType1.equals(effectivities.get(i).getType2()) || enemyType2.equals(effectivities.get(i).getType2()) ))
+                {
+                    if(effectivities.get(i).isTwice())
+                    {
+                        System.out.println("Sehr effektiv");
+                        return attackDamage * 2;
+                    }
+                    else if(effectivities.get(i).isHalf())
+                    {
+                        System.out.println("Nicht sehr effektiv");
+                        return attackDamage / 2;
+                    }
+                    else
+                    {
+                        System.out.println("Hat keine Wirkung");
+                        return 0;
+                    }
+                }
             }
         }
+        return attackDamage;
     }
 
     public int typeEffectivityEnemy(String attackType, int attackDamage)
