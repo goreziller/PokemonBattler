@@ -19,9 +19,9 @@ Ziel in dem Spiel ist es sich das beste Team zu bauen und möglichst weit in den
 - Pokemon Icon Types werden beim jeweiligen Pokemon angezeigt
 - Attacken werden in der jeweiligen Farbe des Types angezeigt und deren Typ Icon
 - Ebenen bestehen aus jeweils 4 Stages
+- Typen Effektivität wird zu teilen berücksichtig
 
 ## Geplante Features
-- Typen Effektivität wird aktuell noch nicht berücksichtig
 - Scaling der Gegner
 - Anpassung von der Schadensberechnung
 - HP & Schaden Scaling abhängig vom Lvl. des Pokemon
