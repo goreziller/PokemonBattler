@@ -2103,27 +2103,26 @@ public class FightController implements Initializable
 
     public int typeEffectivityPlayer(String attackType, int attackDamage)
     {
+        loadEffectivityDatabase();
         if(enemyType2 == null)
         {
-            loadEffectivityDatabase();
-
             for(int i = 0; i < effectivities.size(); i++)
             {
                 if(attackType.equals(effectivities.get(i).getType1()) && enemyType1.equals(effectivities.get(i).getType2()))
                 {
                     if(effectivities.get(i).isTwice())
                     {
-                        System.out.println("Sehr effektiv");
+                        System.out.println("Player: Sehr effektiv");
                         return attackDamage * 2;
                     }
                     else if(effectivities.get(i).isHalf())
                     {
-                        System.out.println("Nicht sehr effektiv");
+                        System.out.println("Player: Nicht sehr effektiv");
                         return attackDamage / 2;
                     }
                     else
                     {
-                        System.out.println("Hat keine Wirkung");
+                        System.out.println("Player: Hat keine Wirkung");
                         return 0;
                     }
                 }
@@ -2131,25 +2130,23 @@ public class FightController implements Initializable
         }
         else
         {
-            loadEffectivityDatabase();
-
             for(int i = 0; i < effectivities.size(); i++)
             {
                 if(attackType.equals(effectivities.get(i).getType1()) && ( enemyType1.equals(effectivities.get(i).getType2()) || enemyType2.equals(effectivities.get(i).getType2()) ))
                 {
                     if(effectivities.get(i).isTwice())
                     {
-                        System.out.println("Sehr effektiv");
+                        System.out.println("Player: Sehr effektiv");
                         return attackDamage * 2;
                     }
                     else if(effectivities.get(i).isHalf())
                     {
-                        System.out.println("Nicht sehr effektiv");
+                        System.out.println("Player: Nicht sehr effektiv");
                         return attackDamage / 2;
                     }
                     else
                     {
-                        System.out.println("Hat keine Wirkung");
+                        System.out.println("Player: Hat keine Wirkung");
                         return 0;
                     }
                 }
@@ -2160,40 +2157,56 @@ public class FightController implements Initializable
 
     public int typeEffectivityEnemy(String attackType, int attackDamage)
     {
+        loadEffectivityDatabase();
         if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().size() != 2)
         {
-            if(attackType.equals("normal") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("rock"))
+            for(int i = 0; i < effectivities.size(); i++)
             {
-                System.out.println("Nicht sehr effektiv (normal/rock)");
-                return attackDamage / 2;
-            }
-            if(attackType.equals("ice") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("flying"))
-            {
-                System.out.println("Sehr effektiv (Ice/Flying)");
-                return attackDamage * 2;
-            }
-            else
-            {
-                return attackDamage;
+                if(attackType.equals(effectivities.get(i).getType1()) && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals(effectivities.get(i).getType2()))
+                {
+                    if(effectivities.get(i).isTwice())
+                    {
+                        System.out.println("Enemy: Sehr effektiv");
+                        return attackDamage * 2;
+                    }
+                    else if(effectivities.get(i).isHalf())
+                    {
+                        System.out.println("Enemy: Nicht sehr effektiv");
+                        return attackDamage / 2;
+                    }
+                    else
+                    {
+                        System.out.println("Enemy: Hat keine Wirkung");
+                        return 0;
+                    }
+                }
             }
         }
         else
         {
-            if(attackType.equals("normal") && (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("rock") || SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName().equals("rock")))
+            for(int i = 0; i < effectivities.size(); i++)
             {
-                System.out.println("Nicht sehr effektiv (normal/rock)");
-                return attackDamage / 2;
-            }
-            if(attackType.equals("ice") && (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("flying") || SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName().equals("flying")))
-            {
-                System.out.println("Sehr effektiv (Ice/Flying)");
-                return attackDamage * 2;
-            }
-            else
-            {
-                return attackDamage;
+                if(attackType.equals(effectivities.get(i).getType1()) && ( SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals(effectivities.get(i).getType2()) || SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName().equals(effectivities.get(i).getType2()) ))
+                {
+                    if(effectivities.get(i).isTwice())
+                    {
+                        System.out.println("Enemy: Sehr effektiv");
+                        return attackDamage * 2;
+                    }
+                    else if(effectivities.get(i).isHalf())
+                    {
+                        System.out.println("Enemy: Nicht sehr effektiv");
+                        return attackDamage / 2;
+                    }
+                    else
+                    {
+                        System.out.println("Enemy: Hat keine Wirkung");
+                        return 0;
+                    }
+                }
             }
         }
+        return attackDamage;
     }
 
     public void returnToMenue()
