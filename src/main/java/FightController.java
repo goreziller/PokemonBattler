@@ -60,6 +60,10 @@ public class FightController implements Initializable
     private ArrayList<Types> psychicTypes;
     private ArrayList<Types> rockTypes;
     private ArrayList<Types> dragonTypes;
+    private String enemyType1;
+    private String enemyType2;
+    private String enemyAttackType;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
@@ -984,6 +988,15 @@ public class FightController implements Initializable
             currentenemyhp = enemyhp;
             enemyimage.setImage(new Image(p.getSprites().getFront_default()));
             String enemyName = p.getName();
+            if(p.getTypes().size() == 2)
+            {
+                enemyType1 = p.getTypes().get(0).getType().getName();
+                enemyType2 = p.getTypes().get(1).getType().getName();
+            }
+            else
+            {
+                enemyType1 = p.getTypes().get(0).getType().getName();
+            }
             enemyName = enemyName.substring(0, 1).toUpperCase() + enemyName.substring(1).toLowerCase();
             enemyname.setText(enemyName);
             enemylevel.setText("Lv." + p.getLevel());
@@ -1928,21 +1941,28 @@ public class FightController implements Initializable
         switch (randomAttack)
         {
             case 1:
-                enemyDamage = (p.getMove1().getPower() / 4);
+                enemyAttackType = p.getMove1().getType().getName();
+                enemyDamage = typeEffectivityPlayer (enemyAttackType,p.getMove1().getPower() / 4);
             case 2:
-                enemyDamage = (p.getMove2().getPower() / 4);
+                enemyAttackType = p.getMove1().getType().getName();
+                enemyDamage = typeEffectivityEnemy(enemyAttackType,p.getMove2().getPower() / 4);
             case 3:
-                enemyDamage = (p.getMove3().getPower() / 4);
+                enemyAttackType = p.getMove1().getType().getName();
+                enemyDamage = typeEffectivityEnemy(enemyAttackType,p.getMove3().getPower() / 4);
             case 4:
-                enemyDamage = (p.getMove4().getPower() / 4);
+                enemyAttackType = p.getMove1().getType().getName();
+                enemyDamage = typeEffectivityEnemy (enemyAttackType,p.getMove4().getPower() / 4);
         }
     }
 
     public void chooseAttackOne()
     {
         //Turn Player
-        playerDamage = (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4);
+        String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName();
+        System.out.println(playerAttackType);
+        playerDamage = typeEffectivityPlayer(playerAttackType, SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4);
         System.out.println(playerDamage);
+
         currentenemyhp = currentenemyhp - playerDamage;
         //Turn Enemy
         selectEnemyAttack();
@@ -1969,8 +1989,11 @@ public class FightController implements Initializable
     public void chooseAttackTwo()
     {
         //Turn Player
-        playerDamage = (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4);
+        String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName();
+        System.out.println(playerAttackType);
+        playerDamage = typeEffectivityPlayer(playerAttackType, SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4);
         System.out.println(playerDamage);
+
         currentenemyhp = currentenemyhp - playerDamage;
         //Turn Enemy
         selectEnemyAttack();
@@ -1997,8 +2020,11 @@ public class FightController implements Initializable
     public void chooseAttackThree()
     {
         //Turn Player
-        playerDamage = (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4);
+        String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName();
+        System.out.println(playerAttackType);
+        playerDamage = typeEffectivityPlayer(playerAttackType, SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4);
         System.out.println(playerDamage);
+
         currentenemyhp = currentenemyhp - playerDamage;
         //Turn Enemy
         selectEnemyAttack();
@@ -2025,7 +2051,11 @@ public class FightController implements Initializable
     public void chooseAttackFour()
     {
         //Turn Player
-        playerDamage = (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4);
+        String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName();
+        System.out.println(playerAttackType);
+        playerDamage = typeEffectivityPlayer(playerAttackType, SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4);
+        System.out.println(playerDamage);
+
         currentenemyhp = currentenemyhp - playerDamage;
         //Turn Enemy
         selectEnemyAttack();
@@ -2046,6 +2076,82 @@ public class FightController implements Initializable
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
             SelectPokemonController.getPlayer().newStage();
             returnToMenue();
+        }
+    }
+
+    public int typeEffectivityPlayer(String attackType, int attackDamage)
+    {
+        if(enemyType2 == null)
+        {
+            if(attackType.equals("normal") && enemyType1.equals("rock"))
+            {
+                System.out.println("Nicht sehr effektiv (normal/rock)");
+                return attackDamage / 2;
+            }
+            if(attackType.equals("ice") && enemyType1.equals("flying"))
+            {
+                System.out.println("Sehr effektiv (Ice/Flying)");
+                return attackDamage * 2;
+            }
+            else
+            {
+                return attackDamage;
+            }
+        }
+        else
+        {
+            if(attackType.equals("normal") && (enemyType1.equals("rock") || enemyType2.equals("rock")))
+            {
+                System.out.println("Nicht sehr effektiv (normal/rock)");
+                return attackDamage / 2;
+            }
+            if(attackType.equals("ice") && (enemyType1.equals("flying") || enemyType2.equals("flying")))
+            {
+                System.out.println("Sehr effektiv (Ice/Flying)");
+                return attackDamage * 2;
+            }
+            else
+            {
+                return attackDamage;
+            }
+        }
+    }
+
+    public int typeEffectivityEnemy(String attackType, int attackDamage)
+    {
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().size() != 2)
+        {
+            if(attackType.equals("normal") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("rock"))
+            {
+                System.out.println("Nicht sehr effektiv (normal/rock)");
+                return attackDamage / 2;
+            }
+            if(attackType.equals("ice") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("flying"))
+            {
+                System.out.println("Sehr effektiv (Ice/Flying)");
+                return attackDamage * 2;
+            }
+            else
+            {
+                return attackDamage;
+            }
+        }
+        else
+        {
+            if(attackType.equals("normal") && (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("rock") || SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName().equals("rock")))
+            {
+                System.out.println("Nicht sehr effektiv (normal/rock)");
+                return attackDamage / 2;
+            }
+            if(attackType.equals("ice") && (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("flying") || SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName().equals("flying")))
+            {
+                System.out.println("Sehr effektiv (Ice/Flying)");
+                return attackDamage * 2;
+            }
+            else
+            {
+                return attackDamage;
+            }
         }
     }
 
