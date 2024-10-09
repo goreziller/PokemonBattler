@@ -35,7 +35,7 @@
       <Label fx:id="pokemonlevel" alignment="CENTER" layoutX="450.0" layoutY="235.0" prefHeight="17.0" prefWidth="66.0" text="level" />
       <Label fx:id="hpbar" alignment="CENTER" layoutX="415.0" layoutY="260.0" prefHeight="17.0" prefWidth="105.0" text="hp" />
       <Label fx:id="showhp" alignment="CENTER" layoutX="410.0" layoutY="290.0" prefHeight="17.0" prefWidth="113.0" text="leben" />
-      <Label fx:id="enemyname" alignment="CENTER" layoutX="45.0" layoutY="60.0" prefHeight="17.0" prefWidth="94.0" text="enemyname">
+      <Label fx:id="enemyname" alignment="CENTER" layoutX="45.0" layoutY="60.0" prefHeight="17.0" prefWidth="130.0" text="enemyname">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>

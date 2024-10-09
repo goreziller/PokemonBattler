@@ -2618,6 +2618,7 @@ public class FightController implements Initializable
         {
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
             SelectPokemonController.getPlayer().newStage();
+            SelectPokemonController.getPlayer().loseLife();
             returnToMenue();
         }
     }
@@ -2649,6 +2650,7 @@ public class FightController implements Initializable
         {
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
             SelectPokemonController.getPlayer().newStage();
+            SelectPokemonController.getPlayer().loseLife();
             returnToMenue();
         }
     }
@@ -2680,6 +2682,7 @@ public class FightController implements Initializable
         {
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
             SelectPokemonController.getPlayer().newStage();
+            SelectPokemonController.getPlayer().loseLife();
             returnToMenue();
         }
     }
@@ -2711,6 +2714,7 @@ public class FightController implements Initializable
         {
             SelectPokemonController.getPlayer().getStatistik().neueNiederlage();
             SelectPokemonController.getPlayer().newStage();
+            SelectPokemonController.getPlayer().loseLife();
             returnToMenue();
         }
     }

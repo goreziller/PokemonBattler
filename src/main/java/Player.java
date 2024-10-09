@@ -16,7 +16,7 @@ public class Player implements Serializable
     @Getter
     private int coins;
     @Getter
-    private int life = 3;
+    private int life = 5;
     private int selectedIndex = 0;
 
     public Player()
