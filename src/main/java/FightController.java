@@ -64,6 +64,7 @@ public class FightController implements Initializable
     private String enemyType2;
     private String enemyAttackType;
     private ArrayList<PokemonTypeEffectivity> effectivities;
+    private double attackDamage;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -1665,53 +1666,239 @@ public class FightController implements Initializable
     public void typespecificButton()
     {
         //Fire Type
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName().equals("fire"))
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().size() == 2)
         {
-            Image img = new Image("file:src/main/Bilder/FireType.png");
-            ImageView view = new ImageView(img);
-            view.setFitWidth(20);
-            view.setFitHeight(20);
-            move1.setGraphic(view);
-            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
-            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
-            move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
-            move1.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            if((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName().equals("fire")) ||
+                    (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName().equals("fire")))
+            {
+                HBox hBox = new HBox();
+                widthSize = 20;
+                heightSize = 20;
+
+                Image img = new Image("file:src/main/Bilder/boostIcon.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(widthSize);
+                view.setFitHeight(heightSize);
+
+                Image img1 = new Image("file:src/main/Bilder/FireType.png");
+                ImageView view1 = new ImageView(img1);
+                view1.setFitWidth(widthSize);
+                view1.setFitHeight(heightSize);
+
+                hBox.getChildren().addAll(view, view1);
+                move1.setGraphic(hBox);
+                String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+                moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                attackDamage = Math.round(((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() * 1.25) / 4));
+                move1.setText(moveName + " " + attackDamage);
+                move1.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            }
+            else if((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("fire")) ||
+                    (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("fire")))
+            {
+                HBox hBox = new HBox();
+                widthSize = 20;
+                heightSize = 20;
+
+                Image img = new Image("file:src/main/Bilder/boostIcon.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(widthSize);
+                view.setFitHeight(heightSize);
+
+                Image img1 = new Image("file:src/main/Bilder/FireType.png");
+                ImageView view1 = new ImageView(img1);
+                view1.setFitWidth(widthSize);
+                view1.setFitHeight(heightSize);
+
+                hBox.getChildren().addAll(view, view1);
+                move2.setGraphic(hBox);
+                String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+                moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                attackDamage = Math.round(((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() * 1.25) / 4));
+                move2.setText(moveName + " " + attackDamage);
+                move2.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            }
+            else if((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("fire")) ||
+                    (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("fire")))
+            {
+                HBox hBox = new HBox();
+                widthSize = 20;
+                heightSize = 20;
+
+                Image img = new Image("file:src/main/Bilder/boostIcon.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(widthSize);
+                view.setFitHeight(heightSize);
+
+                Image img1 = new Image("file:src/main/Bilder/FireType.png");
+                ImageView view1 = new ImageView(img1);
+                view1.setFitWidth(widthSize);
+                view1.setFitHeight(heightSize);
+
+                hBox.getChildren().addAll(view, view1);
+                move3.setGraphic(hBox);
+                String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+                moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                attackDamage = Math.round(((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() * 1.25) / 4));
+                move3.setText(moveName + " " + attackDamage);
+                move3.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            }
+            else if((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("fire")) ||
+                    (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(1).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("fire")))
+            {
+                HBox hBox = new HBox();
+                widthSize = 20;
+                heightSize = 20;
+
+                Image img = new Image("file:src/main/Bilder/boostIcon.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(widthSize);
+                view.setFitHeight(heightSize);
+
+                Image img1 = new Image("file:src/main/Bilder/FireType.png");
+                ImageView view1 = new ImageView(img1);
+                view1.setFitWidth(widthSize);
+                view1.setFitHeight(heightSize);
+
+                hBox.getChildren().addAll(view, view1);
+                move4.setGraphic(hBox);
+                String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+                moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                attackDamage = Math.round(((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() * 1.25) / 4));
+                move4.setText(moveName + " " + attackDamage);
+                move4.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            }
+            else
+            {
+                if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName().equals("fire"))
+                {
+                    Image img = new Image("file:src/main/Bilder/FireType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    move1.setGraphic(view);
+                    String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+                    moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                    attackDamage = (double) SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4;
+                    move1.setText(moveName + " " + attackDamage);
+                    move1.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+                }
+            }
         }
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("fire"))
+        else
         {
-            Image img = new Image("file:src/main/Bilder/FireType.png");
-            ImageView view = new ImageView(img);
-            view.setFitWidth(20);
-            view.setFitHeight(20);
-            move2.setGraphic(view);
-            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
-            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
-            move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
-            move2.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
-        }
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("fire"))
-        {
-            Image img = new Image("file:src/main/Bilder/FireType.png");
-            ImageView view = new ImageView(img);
-            view.setFitWidth(20);
-            view.setFitHeight(20);
-            move3.setGraphic(view);
-            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
-            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
-            move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
-            move3.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
-        }
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("fire"))
-        {
-            Image img = new Image("file:src/main/Bilder/FireType.png");
-            ImageView view = new ImageView(img);
-            view.setFitWidth(20);
-            view.setFitHeight(20);
-            move4.setGraphic(view);
-            String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
-            moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
-            move4.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4));
-            move4.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName().equals("fire"))
+            {
+                HBox hBox = new HBox();
+                widthSize = 20;
+                heightSize = 20;
+
+                Image img = new Image("file:src/main/Bilder/boostIcon.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(widthSize);
+                view.setFitHeight(heightSize);
+
+                Image img1 = new Image("file:src/main/Bilder/FireType.png");
+                ImageView view1 = new ImageView(img1);
+                view1.setFitWidth(widthSize);
+                view1.setFitHeight(heightSize);
+
+                hBox.getChildren().addAll(view, view1);
+                move1.setGraphic(hBox);
+                String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+                moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                attackDamage = Math.round(((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() * 1.25) / 4));
+                move1.setText(moveName + " " + attackDamage);
+                move1.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            }
+            else if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("fire"))
+            {
+                HBox hBox = new HBox();
+                widthSize = 20;
+                heightSize = 20;
+
+                Image img = new Image("file:src/main/Bilder/boostIcon.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(widthSize);
+                view.setFitHeight(heightSize);
+
+                Image img1 = new Image("file:src/main/Bilder/FireType.png");
+                ImageView view1 = new ImageView(img1);
+                view1.setFitWidth(widthSize);
+                view1.setFitHeight(heightSize);
+
+                hBox.getChildren().addAll(view, view1);
+                move2.setGraphic(hBox);
+                String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getName();
+                moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                attackDamage = Math.round(((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() * 1.25) / 4));
+                move2.setText(moveName + " " + attackDamage);
+                move2.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            }
+            else if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("fire"))
+            {
+                HBox hBox = new HBox();
+                widthSize = 20;
+                heightSize = 20;
+
+                Image img = new Image("file:src/main/Bilder/boostIcon.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(widthSize);
+                view.setFitHeight(heightSize);
+
+                Image img1 = new Image("file:src/main/Bilder/FireType.png");
+                ImageView view1 = new ImageView(img1);
+                view1.setFitWidth(widthSize);
+                view1.setFitHeight(heightSize);
+
+                hBox.getChildren().addAll(view, view1);
+                move3.setGraphic(hBox);
+                String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getName();
+                moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                attackDamage = Math.round(((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() * 1.25) / 4));
+                move3.setText(moveName + " " + attackDamage);
+                move3.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            }
+            else if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals("fire") && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("fire"))
+            {
+                HBox hBox = new HBox();
+                widthSize = 20;
+                heightSize = 20;
+
+                Image img = new Image("file:src/main/Bilder/boostIcon.png");
+                ImageView view = new ImageView(img);
+                view.setFitWidth(widthSize);
+                view.setFitHeight(heightSize);
+
+                Image img1 = new Image("file:src/main/Bilder/FireType.png");
+                ImageView view1 = new ImageView(img1);
+                view1.setFitWidth(widthSize);
+                view1.setFitHeight(heightSize);
+
+                hBox.getChildren().addAll(view, view1);
+                move4.setGraphic(hBox);
+                String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getName();
+                moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                attackDamage = Math.round(((SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() * 1.25) / 4));
+                move4.setText(moveName + " " + attackDamage);
+                move4.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+            }
+            else
+            {
+                if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName().equals("fire"))
+                {
+                    Image img = new Image("file:src/main/Bilder/FireType.png");
+                    ImageView view = new ImageView(img);
+                    view.setFitWidth(20);
+                    view.setFitHeight(20);
+                    move1.setGraphic(view);
+                    String moveName = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getName();
+                    moveName = moveName.substring(0, 1).toUpperCase() + moveName.substring(1).toLowerCase();
+                    attackDamage = (double) SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4;
+                    move1.setText(moveName + " " + attackDamage);
+                    move1.setBackground(new Background(new BackgroundFill(Color.rgb(238, 129, 48), CornerRadii.EMPTY, Insets.EMPTY)));
+                }
+            }
         }
 
         //Water Type
@@ -1965,9 +2152,9 @@ public class FightController implements Initializable
         }
 
         //Electic Type
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName().equals("electic"))
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName().equals("electric"))
         {
-            Image img = new Image("file:src/main/Bilder/ElecticType.png");
+            Image img = new Image("file:src/main/Bilder/ElectricType.png");
             ImageView view = new ImageView(img);
             view.setFitWidth(20);
             view.setFitHeight(20);
@@ -1977,9 +2164,9 @@ public class FightController implements Initializable
             move1.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4));
             move1.setBackground(new Background(new BackgroundFill(Color.rgb(247, 208, 44), CornerRadii.EMPTY, Insets.EMPTY)));
         }
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("electic"))
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName().equals("electric"))
         {
-            Image img = new Image("file:src/main/Bilder/ElecticType.png");
+            Image img = new Image("file:src/main/Bilder/ElectricType.png");
             ImageView view = new ImageView(img);
             view.setFitWidth(20);
             view.setFitHeight(20);
@@ -1989,9 +2176,9 @@ public class FightController implements Initializable
             move2.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4));
             move2.setBackground(new Background(new BackgroundFill(Color.rgb(247, 208, 44), CornerRadii.EMPTY, Insets.EMPTY)));
         }
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("electic"))
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName().equals("electric"))
         {
-            Image img = new Image("file:src/main/Bilder/ElecticType.png");
+            Image img = new Image("file:src/main/Bilder/ElectricType.png");
             ImageView view = new ImageView(img);
             view.setFitWidth(20);
             view.setFitHeight(20);
@@ -2001,9 +2188,9 @@ public class FightController implements Initializable
             move3.setText(moveName + " " + (SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4));
             move3.setBackground(new Background(new BackgroundFill(Color.rgb(247, 208, 44), CornerRadii.EMPTY, Insets.EMPTY)));
         }
-        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("electic"))
+        if(SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName().equals("electric"))
         {
-            Image img = new Image("file:src/main/Bilder/ElecticType.png");
+            Image img = new Image("file:src/main/Bilder/ElectricType.png");
             ImageView view = new ImageView(img);
             view.setFitWidth(20);
             view.setFitHeight(20);
@@ -2596,7 +2783,7 @@ public class FightController implements Initializable
         //Turn Player
         String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName();
         System.out.println(playerAttackType);
-        playerDamage = typeEffectivityPlayer(playerAttackType, SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4);
+        playerDamage = typeEffectivityPlayer(playerAttackType, (int) attackDamage);
         System.out.println(playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
@@ -2628,7 +2815,7 @@ public class FightController implements Initializable
         //Turn Player
         String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName();
         System.out.println(playerAttackType);
-        playerDamage = typeEffectivityPlayer(playerAttackType, SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4);
+        playerDamage = typeEffectivityPlayer(playerAttackType, (int) attackDamage);
         System.out.println(playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
@@ -2660,7 +2847,7 @@ public class FightController implements Initializable
         //Turn Player
         String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName();
         System.out.println(playerAttackType);
-        playerDamage = typeEffectivityPlayer(playerAttackType, SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4);
+        playerDamage = typeEffectivityPlayer(playerAttackType, (int) attackDamage);
         System.out.println(playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
@@ -2692,7 +2879,7 @@ public class FightController implements Initializable
         //Turn Player
         String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName();
         System.out.println(playerAttackType);
-        playerDamage = typeEffectivityPlayer(playerAttackType, SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4);
+        playerDamage = typeEffectivityPlayer(playerAttackType, (int) attackDamage);
         System.out.println(playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
