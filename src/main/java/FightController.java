@@ -2783,7 +2783,8 @@ public class FightController implements Initializable
         //Turn Player
         String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getType().getName();
         System.out.println(playerAttackType);
-        playerDamage = typeEffectivityPlayer(playerAttackType, (int) attackDamage);
+        int playerAttack = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4;
+        playerDamage = typeEffectivityPlayer(playerAttackType, playerAttack);
         System.out.println(playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
@@ -2815,7 +2816,8 @@ public class FightController implements Initializable
         //Turn Player
         String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getType().getName();
         System.out.println(playerAttackType);
-        playerDamage = typeEffectivityPlayer(playerAttackType, (int) attackDamage);
+        int playerAttack = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4;
+        playerDamage = typeEffectivityPlayer(playerAttackType, playerAttack);
         System.out.println(playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
@@ -2847,7 +2849,8 @@ public class FightController implements Initializable
         //Turn Player
         String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getType().getName();
         System.out.println(playerAttackType);
-        playerDamage = typeEffectivityPlayer(playerAttackType, (int) attackDamage);
+        int playerAttack = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4;
+        playerDamage = typeEffectivityPlayer(playerAttackType, playerAttack);
         System.out.println(playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
@@ -2879,7 +2882,8 @@ public class FightController implements Initializable
         //Turn Player
         String playerAttackType = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getType().getName();
         System.out.println(playerAttackType);
-        playerDamage = typeEffectivityPlayer(playerAttackType, (int) attackDamage);
+        int playerAttack = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4;
+        playerDamage = typeEffectivityPlayer(playerAttackType, playerAttack);
         System.out.println(playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
