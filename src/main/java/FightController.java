@@ -2765,16 +2765,20 @@ public class FightController implements Initializable
         {
             case 1:
                 enemyAttackType = p.getMove1().getType().getName();
-                enemyDamage = typeEffectivityPlayer (enemyAttackType,p.getMove1().getPower() / 4);
+                System.out.println(enemyAttackType);
+                enemyDamage = typeEffectivityEnemy(enemyAttackType,p.getMove1().getPower() / 4);
             case 2:
-                enemyAttackType = p.getMove1().getType().getName();
+                enemyAttackType = p.getMove2().getType().getName();
+                System.out.println(enemyAttackType);
                 enemyDamage = typeEffectivityEnemy(enemyAttackType,p.getMove2().getPower() / 4);
             case 3:
-                enemyAttackType = p.getMove1().getType().getName();
+                enemyAttackType = p.getMove3().getType().getName();
+                System.out.println(enemyAttackType);
                 enemyDamage = typeEffectivityEnemy(enemyAttackType,p.getMove3().getPower() / 4);
             case 4:
-                enemyAttackType = p.getMove1().getType().getName();
-                enemyDamage = typeEffectivityEnemy (enemyAttackType,p.getMove4().getPower() / 4);
+                enemyAttackType = p.getMove4().getType().getName();
+                System.out.println(enemyAttackType);
+                enemyDamage = typeEffectivityEnemy(enemyAttackType,p.getMove4().getPower() / 4);
         }
     }
 
@@ -2785,7 +2789,7 @@ public class FightController implements Initializable
         System.out.println(playerAttackType);
         int playerAttack = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove1().getPower() / 4;
         playerDamage = typeEffectivityPlayer(playerAttackType, playerAttack);
-        System.out.println(playerDamage);
+        System.out.println("Playerschaden: " + playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
         //Turn Enemy
@@ -2818,7 +2822,7 @@ public class FightController implements Initializable
         System.out.println(playerAttackType);
         int playerAttack = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove2().getPower() / 4;
         playerDamage = typeEffectivityPlayer(playerAttackType, playerAttack);
-        System.out.println(playerDamage);
+        System.out.println("Playerschaden: " + playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
         //Turn Enemy
@@ -2851,7 +2855,7 @@ public class FightController implements Initializable
         System.out.println(playerAttackType);
         int playerAttack = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove3().getPower() / 4;
         playerDamage = typeEffectivityPlayer(playerAttackType, playerAttack);
-        System.out.println(playerDamage);
+        System.out.println("Playerschaden: " + playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
         //Turn Enemy
@@ -2884,7 +2888,7 @@ public class FightController implements Initializable
         System.out.println(playerAttackType);
         int playerAttack = SelectPokemonController.getPlayer().getPokemonliste().get(slot).getMove4().getPower() / 4;
         playerDamage = typeEffectivityPlayer(playerAttackType, playerAttack);
-        System.out.println(playerDamage);
+        System.out.println("Playerschaden: " + playerDamage);
 
         currentenemyhp = currentenemyhp - playerDamage;
         //Turn Enemy
@@ -2992,7 +2996,7 @@ public class FightController implements Initializable
         {
             for(int i = 0; i < effectivities.size(); i++)
             {
-                if(attackType.equals(effectivities.get(i).getType1()) && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals(effectivities.get(i).getType2()))
+                if(attackType.equals(effectivities.get(i).getType1()) && SelectPokemonController.getPlayer().getPokemonliste().get(slot).getTypes().get(0).getType().getName().equals(effectivities.get(i).getType1()))
                 {
                     if(effectivities.get(i).isTwice())
                     {
